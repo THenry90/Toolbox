@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/styles/main.css/main.css">
+    <script src="./scripts/javascript.js"></script>
+    <title>Pseudo-Selectors</title>
+</head>
+<body>
+
+    <h1>Pseudo Selectors</h1>
+
+    <main>
+        <section class="section-1">
+            <h2>Pseudo-Selectors</h2>
+            <ul>
+                <li>:hover</li>
+                <li>:active</li>
+                <li>:focus</li>
+                <li>:valid</li>
+                <li>:invalid</li>
+                <li>:not()</li>
+                <li>:checked</li>
+                <li>:enabled</li>
+                <li>:disabled</li>
+
+            </ul>
+            <div>
+                <p class="explanation">Pseudo-classes are used to trigger CSS transitions.
+
+                    <br>The best pseudo-classes to use with transitions are those that the user will interact with as they browse the site.
+                    
+                    <br>You can chain pseudo-classes together to make more specific pseudo-selectors.
+                    
+                    <br>Pseudo-selectors can be used to manipulate its element's next sibling as well as itself.</p>
+                <div>
+                    <h3>Form validation</h3>
+                    <p> using :focus to add a border to the form</p>
+                </div>
+                <div class="email-container">
+                 <div class="form">
+                    <div class="form__group">
+                        <label for="">email</label>
+                        <input type="email" name="" id="">
+                    </div>
+                 </div>  
+                </div>
+                <p>Final code:</p>
+                <br>
+                <img class="demo-media demo-pic" src="../images/Screenshot 2023-02-27 at 12.22.50.png">
+
+                <ul class="step-by-step-text email-form">
+                    <li>Use the  :active  pseudo selector to provide the user with a bit of feedback, 
+                        letting them know that they have made the input field active by highlighting it 
+                        with a border</li>
+                        <br>
+                    <li>When we change the state of the input to :focus, it should add a purple border
+                         to the element.</li>
+                         <br>
+                    <li>Combine it with the  :invalid  pseudo-class, so that they receive 
+                        feedback that they haven't entered a valid email address.</li>
+                        <br>
+                    <li>Flickering between the :focus and  :invalid is a bit obnoxious. <br>
+                        Make use of the :not() pseudo-selector, <br>
+                        Combined with the  :focus pseudo-selector <br>
+                        This allows the user to finish entering 
+                        their email address before telling them whether it's valid or not:</li>
+                        <br>
+                        <li>&:focus {}</li>
+                        <br>
+                    <li> The :not() pseudo-selector registers as true when it's containing selector registers as false.<br>
+                         In this case, :not() will return true if the input is not in the :focus state.<br> 
+                         You can chain pseudo-classes together, just like with standard classes.<br>
+                         <br> 
+                         In this case, we've created a pseudo-selector that will apply its rule set if the element
+                          isn't in the :focus state and the email address is :invalid.  This way we don't see the red warning 
+                          signs of an invalid email until they've finished typing their address:</li>
+                          <br>
+                          <li>&:not(:focus):invalid {}</li>
+                          <br>
+                    <li>Add animation to the changes in state by adding a transition for the  background-color that takes
+                         half of a second to complete:</li>
+                         <br>
+                    <li>"Transition:background-color:500ms;"</li>
+                    <br>
+
+                </ul>
+                   
+                   
+             
+            </div>
+
+            <div class="example-container example-container1">
+                <div class="demo-wrapper">
+                    <div class="demo-title"><h4>Blank square</h4></div>
+                    <div class="square-container square-container1">
+                        <div class="square square-0"></div>
+                    </div>
+                    <p class="demo-text">
+          
+                </div>
+                
+               
+                <div class="demo-wrapper">
+                    <div class="demo-title"><h4>Hover</h4></div>
+                    <div class="square-container square-container1">
+                        <div class="square square-1"></div>
+                    </div>
+                    <p class="demo-text">using: 
+                        <br>
+                        <br>  &:hover{<br>
+                        transform:scale(1.5);<br>}
+                        <br>
+                        Also used: cursor: pointer; to change cursor.
+                    </p>
+                        
+
+                </div>
+
+                <div class="demo-wrapper">
+                    <div class="demo-title"><h4>First square affects next</h4></div>
+                    <div class="square-container square-container1">
+                        <div class="square square-2"></div>
+                        <div class="square square-3"></div>
+                    </div>
+                    <p class="demo-text">Using the adjacent sibling  combinator to 
+                        couple the square on the right with the :hover pseudo-selector  
+                        from the square on the left instead:
+                        <br>
+                        <br>  .square-2{...&:hover +.square-3{<br>
+                        transform:scale(1.9);<br>}}</p>
+                </div>
+                <div class="demo-wrapper">
+                    <div class="demo-title"><h4>First square affects next when <span class="highlighted-container">:active</span> (whilst being pressed)</h4></div>
+                    <div class="square-container square-container1">
+                        <div class="square square-4"></div>
+                        <div class="square square-5"></div>
+                    </div>
+                    <p class="demo-text">Using the adjacent sibling  but also with transition:transform 4000ms
+                        to make the animation happen over time
+                        <br>
+                        <br> &:active + .square-5{<br>transform: scale(0.1);<br>
+                        transition: transform 4000ms;<br>
+                        transform:scale(1.9);<br>}}</p>
+                </div>
+
+                <div class="demo-wrapper">
+                    <div class="demo-title"><h4>Blank square</h4></div>
+                    <div class="square-container square-container1">
+                        <div class="square square-2"></div>
+                    </div>
+                    <p class="demo-text">using: 
+                        <br>
+                        <br>  &:hover{<br>
+                        transform:scale(1.5);<br>}
+                    </p>
+                </div>
+
+                <div class="demo-wrapper">
+                    <div class="demo-title"><h4>Blank square</h4></div>
+                    <div class="square-container square-container1">
+                        <div class="square square-2"></div>
+                    </div>
+                    <p class="demo-text">using: 
+                        <br>
+                        <br>  &:hover{<br>
+                        transform:scale(1.5);<br>}
+                    </p>
+                </div>
+
+                <div class="demo-wrapper">
+                    <div class="demo-title"><h4>Blank square</h4></div>
+                    <div class="square-container square-container1">
+                        <div class="square square-2"></div>
+                    </div>
+                    <p class="demo-text">using: 
+                        <br>
+                        <br>  &:hover{<br>
+                        transform:scale(1.5);<br>}
+                    </p>
+                </div>
+
+                <div class="demo-wrapper">
+                    <div class="demo-title"><h4>Blank square</h4></div>
+                    <div class="square-container square-container1">
+                        <div class="square square-2"></div>
+                    </div>
+                    <p class="demo-text">using: 
+                        <br>
+                        <br>  &:hover{<br>
+                        transform:scale(1.5);<br>}
+                    </p>
+                </div>
+                
+            </div>
+           
+          
+
+        </section>
+    </main>
+
+   
+        <section class="section-1">
+            <h2>Buttons!</h2>
+
+            <p>Final code:</p>
+            <br>
+            <img class="demo-media demo-pic" src="../images/Screenshot 2023-02-28 at 01.25.58.png">
+            <div class="btn-container">
+                <div class="btn btn-1">
+                   Hover over me!
+                </div>   
+           </div>
+
+           <p>When you want to transition multiple properties at once, 
+            rather than typing the name of the property that you want to transition:</p>
+            <p>transition: transform 450ms;</p>
+            <p>Instead use the all keyword in its place:</p>
+            <p>transition: all 450ms;</p>
+            <p>By using the all keyword, you are telling the browser to transition
+                all of the properties you have changed within the :hover pseudo-selector,
+                rather than a specific property. So let's add a transition to the 
+                .btn selector to animate both the scale of the button and its background opacity:</p>
+            <p>Using the all keyword is perfect for when you want multiple things to happen at the same time,
+                and for the same duration, but there's another way to add multiple properties to a transition.
+                Rather than using all, you can list out the animations for each property that you'd like to 
+                transition, separated by commas. So, in the case of our transitions for transform and 
+                background-color, we could split them like this: </p>
+            <p>transition: transform 450ms, background-color 450ms;</p>
+            <p>Now that they're separate, you can give them different durations, which can help break up
+                the uniformity of the animation, creating something more visually interesting to engage the user. 
+                Let's make the background-color transition a little faster than the
+                scale by shortening its duration to 300ms:</p>
+                <p>transition: transform 450ms, background-color 300ms;</p>
+                <p>Now the background-color will be fully opaque before the button has
+                   finished scaling up. The difference isn't huge, but those few fractions 
+                   of a second help make it feel a little less perfect and give it some texture:</p>
+                <img class="demo-media demo-pic" src="../images/button timing difference.gif">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+        </section>
+   
+
+    <main>
+        <section class="section-4">
+            
+            
+        </section>
+    </main>
+    
+</body>
+</html>

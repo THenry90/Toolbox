@@ -1,0 +1,57 @@
+h1 {
+    display:flex;
+    margin:auto;
+    background-color: rgb(221, 221, 221);
+    border:rgb(64, 64, 64) solid 1px;
+    border-radius:20px;
+    margin-top:50px;
+    padding:20px 150px 20px 150px;
+}
+
+h1,h2{
+    text-align:center;
+}
+h4{
+    height:50px;
+ 
+}
+
+.explanation{
+    margin:auto;
+    width:600px;
+    height:auto;
+}
+
+.demo-title{
+   
+}
+.demo-text{
+    text-align:left;
+    padding-top:10px;
+    padding:20px;
+    display:block;
+    height:auto;
+    min-height:200px;
+  
+}
+
+.step-by-step-text{
+    padding-left:100px;
+    line-height:30px;
+    width:70%;
+}
+
+.contents-list {
+    padding-left:100px;
+}
+
+.section-description {
+    padding-left:100px;
+}
+
+.highlighted-container {
+
+    background: #FFC107;
+
+
+}

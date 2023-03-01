@@ -1,0 +1,26 @@
+@use'../utils/variables' as vars;
+
+.btn-container{
+    width:90%;
+    display:flex;
+    margin:auto;
+    justify-content:center;
+}
+
+.btn {
+    background-color: vars.$cd-btn-start;
+    border: 4px solid vars.$cd-btn;
+    border-radius: 10rem;
+    color:rgb(83, 224, 2);
+    cursor: pointer;
+    font-size: 3rem;
+    overflow: hidden;
+    padding: 1.85rem 3rem;
+    position: relative;
+    transition: transform 450ms, background-color 300ms 150ms;
+    &:hover {
+        transform: scale(1.13);
+        background-color: vars.$cd-btn-end;
+    }
+}
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/styles/main.css/main.css">
+    <script src="../scripts/javascript.js"></script>
+    <title>Script playground</title>
+</head>
+<body>
+    <h1>Script Playground</h1>
+    <main>
+        <section class="section-1">
+            <h2>Contents</h2>
+            <ul class="contents-list">
+                <li>Topic 1</li>
+                <li>Topic 2</li>
+            </ul>
+            <div>
+                <div class="section-description">
+                    <h3>Sub-title</h3>
+                    <p> Details</p>
+                </div>
+            </div>
+            <h2>Declaring Variables</h2>
+<!--White Container-->
+            <div class="example-container example-container1">
+                <div class="script-container">
+                    <div class="script-wrapper">
+                        <p>Simple Declarations:</p>
+                    <div id="script-1" class="script"></div>
+                    <div class="script__description"><p> Using "let" to state variables <br></eg>eg. "let person = "Tom";
+                        using "window.onload = function() {
+                            // connects to ID in HTML div
+                          ;document.getElementById("script-1").innerHTML = "Name: " + person + "<br>Age: " + age + "<br>Hobby: " + hobby
+                          + "<br>Years Producing: " + yearsProducing 
+                          + "<br>Years Loved Music: " + yearsLovedMusic; "
+                    </p></div>
+                </div>
+                    <div>
+                        <p>Using addition and subtraction</p>
+                    <div id="script-2" class="script"></div>
+                </div>
+
+                <div>
+                    <p>Cookie Jar calculator - functions and constants</p>
+                        <div class="script">
+
+                            <label for="cookies-in-jar">Number of cookies in jar:</label>
+                            <input type="number" id="cookies-in-jar" />
+                        
+                            <label for="cookies-eaten">Number of cookies eaten:</label>
+                            <input type="number" id="cookies-eaten" />
+                        
+                            <button onclick="calculateCookiesLeft()">Calculate cookies left</button>
+                        
+                            <p id="cookies-left" class="script__output1"></p>
+
+                        </div>
+                        <div class="script__description">
+                        <p>Using a combination of functions and constants. The text titles for the input is 
+                            assigned with the "label" html. The input is assigned as an "input type=number" 
+                            and the id is used by javascript.</p>
+                        
+                        <p>The JS file the function is calculatCookiesLeft(){ with two const 's declared' 
+                        as "cookiesInJar" and "cookiesEatenin" and asked to be taken from the input fields with 
+                        the associated ID's eg. "const cookiesInJarB = document.getElementById("cookies-in-jar").value;"</p>
+
+                        <p>"const cookiesLeft = cookiesInJarB - cookiesEaten;" calculated the number of cookies in the jar</p>
+                        <p>"document.getElementById("cookies-left").textContent = "Cookies Left: " + cookiesLeft;" displays 
+                            cookies left.
+                        </p>
+                    </div>
+
+                     </div>
+                </div>
+            </div>
+           
+            
+        </section>
+    </main>
+    <main>
+        <section class="section-1">
+            <h2>Title</h2>
+            <ul class="demo-text">
+                <li></li>
+            </ul>
+
+            <div class="topic-2-container">
+                <h2>Topic</h2>
+                    <p class="explanation"></p>
+                        <!--<div class="image-container">
+                            <img class="demo-media demo-gif demo-pic" src="">
+                        </div>
+                    <p class="explanation"></p>-->
+
+<!--White Container-->
+<div class="example-container example-container1">
+    <!--light blue demo wrapper-->
+     <div class="demo-wrapper">
+         <!--Demo wrapper title-->
+         <h4>Hover</h4>
+         <!--Beige container-->
+         <div class="square-container square-container1">
+             <!--Demo Square-->
+             <div class="square square-2"></div>
+         </div>
+         <!--Demo text-->
+         <p class="demo-text"></p>
+     </div>
+        
+                        
+                    </div>
+            </div>
+
+
+            
+        </section>
+    </main>
+
+
+    
+</body>
+</html>

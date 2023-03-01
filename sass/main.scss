@@ -1,0 +1,73 @@
+
+
+@use'./base/reset';
+@use'./base/typography';
+
+@use'./components/squares';
+@use'./components/form';
+@use'./components/buttons';
+
+
+@use'./layout/examples';
+@use'./layout/body';
+@use'./layout/sections';
+
+
+@use'./utils/mixins';
+@use'./utils/variables' as vars;
+
+
+
+.script-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+    border:1px solid lightblue;
+    border-radius:20px;
+    background-color:rgb(125, 232, 125);
+    width:100%;
+    text-align:center;
+ 
+   
+}
+
+main {
+    opacity: 1;
+    animation: fade-in 2.5s 1 linear;
+  }
+
+.script-wrapper{
+    height:auto;
+}
+
+.script{
+    width:200px;
+    min-height: 100px;
+    height:auto;
+    border-radius:20px;
+    background-color:lightskyblue;
+    padding:20px;
+    margin:auto;
+    line-height: 30px;
+    
+}
+
+.script__output1{
+    background-color: white;
+    height:32px;
+}
+
+.script__description{
+    padding:20px;
+    background-color:white;
+    margin:20px;
+    width:400px;
+}
+
+
+
+
+
+
+
+
