@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   outline: 1px solid rgba(0, 0, 0, 0.1333333333);
 }
@@ -66,11 +67,10 @@ h4 {
   margin: auto;
   background-color: rgb(229, 226, 153);
 }
-.square-container .square {
+
+.square {
   height: 50px;
   width: 50px;
-  align-self: center;
-  margin: auto;
 }
 
 .square {
@@ -99,6 +99,33 @@ h4 {
   cursor: pointer;
 }
 
+.wide-example {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-move {
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+.btn-move:active + .square-10-move {
+  animation: move-square 2s ease forwards;
+}
+
+@keyframes move-square {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /*square 2 hovering and affecting square 3*/
 .square-2 {
   cursor: pointer;
@@ -245,6 +272,43 @@ body {
   gap: 20px;
 }
 
+/*map structure example */
+/*$map: (
+    key-01: value-01,
+    key-02: value-02,
+    key-03: value-03
+); */
+/* Accessing the value of a map is a bit different than the nth() function for lists. 
+With maps, you need to call the map-get() function: */
+/*$font-size: (logo:7rem, heading:5rem, project-heading:4rem, label:2rem);
+
+.form{
+    &__field {
+        & label {
+            font-size: map-get($font-size, label);
+        }
+    }
+} */
+/* map-get() requires two arguments: the first is the name of the map, 
+and the second is the name of the key. The end result will still be 2rem 
+compiled as the font size in the CSS: */
+/*.form__field label {
+    font-size: 2rem;
+  }
+
+*/
+/* Let’s put our newly found map-making skills to the test and create a map named 
+ $input-txt-palettes, which contains the color palettes for our text inputs. 
+ Group the palettes by their state, and create a key for each pseudo-class:  active,  
+ focus, and  invalid:  */
+/*$colour-primary: #15DEA5;
+$colour-secondary: #001534;
+$colour-accent: #D6FFF5;
+$colour-white: #fff;
+$colour-invalid: #DB464B; */
+/*Now you have keys, but they’re empty; they need values assigned. Fill the keys with your color palettes, which will require nesting another map for the colors within each of the keys.
+
+That’s right, maps inside of maps */
 .script-container {
   display: flex;
   flex-wrap: wrap;
@@ -254,6 +318,11 @@ body {
   background-color: rgb(125, 232, 125);
   width: 100%;
   text-align: center;
+}
+
+main {
+  opacity: 1;
+  animation: fade-in 2.5s 1 linear;
 }
 
 .script-wrapper {
