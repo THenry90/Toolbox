@@ -3,6 +3,8 @@
 .section-1{
     display:flex;
     flex-direction:column;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
     width:90%;
     min-height:500px;
     height:auto;
@@ -15,7 +17,23 @@
 
 .image-container{
     display:flex;
-    }
+}
+
+.image-container2{
+    background-color: rgb(162, 162, 162);
+    padding:30px;
+    margin: 20px;
+    border-radius: 20px;
+
+
+    height:auto
+}
+
+img {
+    border-radius: 15px;
+    
+
+}
 
 .section-2{
     display:flex;
@@ -26,6 +44,15 @@
 .topic-2-container{
     display:flex;
     flex-direction:column;
+
     gap:20px;
     }
+
+
+.full-way{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    height:auto;
+}
 

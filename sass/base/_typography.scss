@@ -8,12 +8,32 @@ h1 {
     padding:20px 150px 20px 150px;
 }
 
+p {
+    text-align: left;
+    line-height: 24px;
+    color:black;
+}
+
 h1,h2{
     text-align:center;
 }
 h4{
     height:50px;
  
+
+    
+}
+
+.code-text{
+    background-color:rgb(29, 29, 29);
+    color:white;
+    font-family: monospace;
+    padding:10px;
+    border-radius:10px;
+}
+
+.title-central{
+    width:100%;
 }
 
 .explanation{
@@ -47,6 +67,7 @@ h4{
 
 .section-description {
     padding-left:100px;
+  
 }
 
 .highlighted-container {
@@ -54,4 +75,75 @@ h4{
     background: #FFC107;
 
 
+}
+
+li {
+    text-align:left;
+    padding:3px;
+}
+
+.console {
+    color:greenyellow;
+}
+
+.vari {
+    color:red;
+}
+.constant-dec{
+color:rgb(32, 115, 247)
+}
+
+
+
+.let-dec{
+    color:aqua;
+}
+
+.obj {
+    color:rgb(255, 9, 255);
+}
+
+.clss {
+    color:yellow;
+}
+
+.ths {
+    color:rgb(0, 128, 255);
+
+}
+
+.new{
+    color:rgb(226, 43, 43)
+}
+
+.strng{
+    color:rgb(250, 250, 160)
+}
+
+.num{
+    color: rgb(246, 255, 0)
+}
+
+.bool{
+    color:rgb(255, 200, 97);
+}
+
+.constructor{
+    color:rgb(64, 224, 115);
+}
+
+.centered-text {
+    padding:0px 30px 20px 50px;
+}
+
+.ifelse {
+    color: rgb(253, 116, 221);
+}
+
+.switch{
+    color:red;
+}
+
+.for {
+    color:rgb(71, 205, 71);
 }

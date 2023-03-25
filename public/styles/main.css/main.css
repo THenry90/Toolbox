@@ -1,8 +1,9 @@
 @charset "UTF-8";
-* {
-  outline: 1px solid rgba(0, 0, 0, 0.1333333333);
+/**{
+    outline:1px solid #0002;
 }
 
+*/
 h1 {
   display: flex;
   margin: auto;
@@ -13,12 +14,30 @@ h1 {
   padding: 20px 150px 20px 150px;
 }
 
+p {
+  text-align: left;
+  line-height: 24px;
+  color: black;
+}
+
 h1, h2 {
   text-align: center;
 }
 
 h4 {
   height: 50px;
+}
+
+.code-text {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  font-family: monospace;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.title-central {
+  width: 100%;
 }
 
 .explanation {
@@ -54,6 +73,75 @@ h4 {
   background: #FFC107;
 }
 
+li {
+  text-align: left;
+  padding: 3px;
+}
+
+.console {
+  color: greenyellow;
+}
+
+.vari {
+  color: red;
+}
+
+.constant-dec {
+  color: rgb(32, 115, 247);
+}
+
+.let-dec {
+  color: aqua;
+}
+
+.obj {
+  color: rgb(255, 9, 255);
+}
+
+.clss {
+  color: yellow;
+}
+
+.ths {
+  color: rgb(0, 128, 255);
+}
+
+.new {
+  color: rgb(226, 43, 43);
+}
+
+.strng {
+  color: rgb(250, 250, 160);
+}
+
+.num {
+  color: rgb(246, 255, 0);
+}
+
+.bool {
+  color: rgb(255, 200, 97);
+}
+
+.constructor {
+  color: rgb(64, 224, 115);
+}
+
+.centered-text {
+  padding: 0px 30px 20px 50px;
+}
+
+.ifelse {
+  color: rgb(253, 116, 221);
+}
+
+.switch {
+  color: red;
+}
+
+.for {
+  color: rgb(71, 205, 71);
+}
+
 .square-container1 {
   width: 200px;
 }
@@ -65,7 +153,7 @@ h4 {
   border: 2px solid;
   height: 200px;
   margin: auto;
-  background-color: rgb(229, 226, 153);
+  background-color: rgb(153, 229, 175);
 }
 
 .square {
@@ -187,6 +275,11 @@ h4 {
   background-color: rgb(1, 28, 55);
 }
 
+.invert {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
 .example-container1 {
   display: flex;
   flex-wrap: wrap;
@@ -243,9 +336,15 @@ body {
   background-color: grey;
 }
 
+body.invert {
+  filter: invert(100%);
+}
+
 .section-1 {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 90%;
   min-height: 500px;
   height: auto;
@@ -260,6 +359,18 @@ body {
   display: flex;
 }
 
+.image-container2 {
+  background-color: rgb(162, 162, 162);
+  padding: 30px;
+  margin: 20px;
+  border-radius: 20px;
+  height: auto;
+}
+
+img {
+  border-radius: 15px;
+}
+
 .section-2 {
   display: flex;
   flex-direction: column;
@@ -270,6 +381,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.full-way {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: auto;
 }
 
 /*map structure example */
@@ -309,15 +427,79 @@ $colour-invalid: #DB464B; */
 /*Now you have keys, but they’re empty; they need values assigned. Fill the keys with your color palettes, which will require nesting another map for the colors within each of the keys.
 
 That’s right, maps inside of maps */
+/*
+
+@mixin white-on-black {
+    color: $color-secondary;
+    background-color: $color-primary;
+}
+
+@mixin black-on-white {
+    color: $color-primary;
+    background-color:  $color-secondary;
+}
+
+
+.input__label{
+    display:inline-block;
+    width:30%;
+    color:$color-secondary;
+    background-color: $color-primary;
+    border-radius: 20px;
+        &:hover{
+            @include black-on-white;
+
+        &:active{
+        &--2 {
+        @include white-on-black;
+        }
+    }
+}
+}
+
+
+
+
+
+
+
+.map-input-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.map-input {
+    background-color: $color-primary;
+        &:focus{
+            background-color: $color-valid
+        }
+
+}
+
+*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 999;
+}
+
 .script-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
   gap: 20px;
   border: 1px solid lightblue;
   border-radius: 20px;
-  background-color: rgb(125, 232, 125);
+  background-color: rgb(225, 222, 210);
   width: 100%;
   text-align: center;
+  min-height: 300px;
 }
 
 main {
@@ -326,7 +508,14 @@ main {
 }
 
 .script-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   height: auto;
+  min-height: 200px;
+  width: 100%;
+  height: fit-content;
+  gap: 30px;
 }
 
 .script {
@@ -348,8 +537,84 @@ main {
 .script__description {
   padding: 20px;
   background-color: white;
-  margin: 20px;
-  width: 400px;
+  margin: 10px;
+  margin-bottom: 40px;
+  width: 370px;
+  height: fit-content;
+  border-radius: 20px;
+  justify-content: space-evenly;
+  box-shadow: 0 0 10px 2px rgb(169, 169, 169);
+  transform: scale(1);
+  transition: ease-in 200ms;
+}
+.script__description:hover {
+  transition-duration: 300ms;
+  scale: 1.02;
+  cursor: pointer;
+}
+
+.script__description {
+  background-color: #FFFFFF;
+  color: #000000;
+  transition: color 0.2s ease-out;
+}
+
+.script-wrapper-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.contents-section {
+  display: flex;
+}
+
+.container__1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  height: auto;
+}
+
+.row2 {
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: auto;
+}
+
+.bin-link {
+  margin: auto;
+}
+
+.key-info {
+  background-color: yellow;
+}
+
+.small-container {
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

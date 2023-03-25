@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,118 +9,1995 @@
     <script src="../scripts/javascript.js"></script>
     <title>Script playground</title>
 </head>
+
+<header>
+    <button onclick="invertColors()">Invert Colors</button>
+ </header>
+
 <body>
     <h1>Script Playground</h1>
     <main>
-        <section class="section-1">
+        <section class="section-1 contents-section">
             <h2>Contents</h2>
             <ul class="contents-list">
-                <li>Topic 1</li>
-                <li>Topic 2</li>
+                <li>Simple Declarations</li>
+                <li>Cookie Jar calculator</li>
+                <li>Constants</li>
+                <li>Checking type</li>
+                <li>Booleans</li>
+                <li>Strings</li>
+                <li>Types in Javascript</li>
             </ul>
-            <div>
-                <div class="section-description">
-                    <h3>Sub-title</h3>
-                    <p> Details</p>
-                </div>
+
+            <div class="script__description bin-link">
+                <p>Remember to use <a href="https://jsbin.com/fohobukatu/edit?js,console"> this link</a></p>
+                <p>It is the JS bin sandbox to work in</p>
+            </div>
             </div>
             <h2>Declaring Variables</h2>
-<!--White Container-->
+            <!--White Container-->
             <div class="example-container example-container1">
                 <div class="script-container">
+
                     <div class="script-wrapper">
-                        <p>Simple Declarations:</p>
-                    <div id="script-1" class="script"></div>
-                    <div class="script__description"><p> Using "let" to state variables <br></eg>eg. "let person = "Tom";
-                        using "window.onload = function() {
-                            // connects to ID in HTML div
-                          ;document.getElementById("script-1").innerHTML = "Name: " + person + "<br>Age: " + age + "<br>Hobby: " + hobby
-                          + "<br>Years Producing: " + yearsProducing 
-                          + "<br>Years Loved Music: " + yearsLovedMusic; "
-                    </p></div>
-                </div>
-                    <div>
-                        <p>Using addition and subtraction</p>
-                    <div id="script-2" class="script"></div>
-                </div>
-
-                <div>
-                    <p>Cookie Jar calculator - functions and constants</p>
-                        <div class="script">
-
-                            <label for="cookies-in-jar">Number of cookies in jar:</label>
-                            <input type="number" id="cookies-in-jar" />
-                        
-                            <label for="cookies-eaten">Number of cookies eaten:</label>
-                            <input type="number" id="cookies-eaten" />
-                        
-                            <button onclick="calculateCookiesLeft()">Calculate cookies left</button>
-                        
-                            <p id="cookies-left" class="script__output1"></p>
-
+                        <div class="container__1">
+                            <h4 class="title-central">Simple Declarations:</h4>
+                            <div class="info-row">
+                                <div id="script-1" class="script"></div>
+                                <div class="script__description">
+                                    <p> Using "let" to state variables <br></eg>eg. "let person = "Tom";
+                                        using "window.onload = function() { <br>
+                                        // connects to ID in HTML div
+                                        ;document.getElementById("script-1").innerHTML = "Name: " + person + "<br>Age: "
+                                        + age + "<br>Hobby: " + hobby
+                                        + "<br>Years Producing: " + yearsProducing
+                                        + "<br>Years Loved Music: " + yearsLovedMusic; "
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="script__description">
-                        <p>Using a combination of functions and constants. The text titles for the input is 
-                            assigned with the "label" html. The input is assigned as an "input type=number" 
-                            and the id is used by javascript.</p>
-                        
-                        <p>The JS file the function is calculatCookiesLeft(){ with two const 's declared' 
-                        as "cookiesInJar" and "cookiesEatenin" and asked to be taken from the input fields with 
-                        the associated ID's eg. "const cookiesInJarB = document.getElementById("cookies-in-jar").value;"</p>
-
-                        <p>"const cookiesLeft = cookiesInJarB - cookiesEaten;" calculated the number of cookies in the jar</p>
-                        <p>"document.getElementById("cookies-left").textContent = "Cookies Left: " + cookiesLeft;" displays 
-                            cookies left.
-                        </p>
                     </div>
 
-                     </div>
+
+                    <div class="container__1">
+                        <div class="full-way">
+                            <div class="half-way">
+                            
+                                <h4>Using addition and subtraction</h4>
+                                <div id="script-2" class="script"></div>
+                            </div>
+                                
+
+                            <div class="half-way">
+                            <h4> Using ++ and -- for counters</h4>
+                        
+                                <div class="script__description bin-link">
+                                    <p>this is shorthand for when you want to add or substract a value</p>
+                                    <p class="code-text">
+                                        <span class="let-dec"> let</span> <span class="vari">numberOfLikes</span> = 10; <br>
+                                        numberOfLikes++; <strong>makes 11</strong> <br>
+                                        numberOfLikes--; and back to 10...who disliked my post?? <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <h4 class="title-central">Cookie Jar calculator - functions and constants</h4>
+                        <div class="info-row">
+                            <div class="script">
+
+                                <label for="cookies-in-jar">Number of cookies in jar:</label>
+                                <input type="number" id="cookies-in-jar" />
+
+                                <label for="cookies-eaten">Number of cookies eaten:</label>
+                                <input type="number" id="cookies-eaten" />
+
+                                <button onclick="calculateCookiesLeft()">Calculate cookies left</button>
+
+                                <p id="cookies-left" class="script__output1"></p>
+
+                            </div>
+                            <div class="script__description">
+                                <p>Using a combination of functions and constants. The text titles for the input is
+                                    assigned with the "label" html. The input is assigned as an "input type=number"
+                                    and the id is used by javascript.</p>
+
+                                <p>The JS file the function is calculatCookiesLeft(){ with two const 's declared'
+                                    as "cookiesInJar" and "cookiesEatenin" and asked to be taken from the input fields
+                                    with
+                                    the associated ID's eg. "const cookiesInJarB =
+                                    document.getElementById("cookies-in-jar").value;"</p>
+
+                                <p>"const cookiesLeft = cookiesInJarB - cookiesEaten;" calculated the number of cookies
+                                    in the jar</p>
+                                <p>"document.getElementById("cookies-left").textContent = "Cookies Left: " +
+                                    cookiesLeft;" displays
+                                    cookies left.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-           
+            <div class="script-container">
+
+                    <div class="small-container">
+             
+                        <div class="script__description key-info">
+                            <h4>Declaring Constants</h4>
+
+                            <p>Use constants to declare numbers that cannot change eg.</p>
+                            <p class="code-text"> const hoursPerDay = 24;</p>
+
+                        </div>
+
+
+                        <div class="script__description key-info">
+                            <h4>Using the console.log</h4>
+                            <p>
+                                Use:
+                            </p>
+                            <p class="code-text"><strong>console.log(myVariable) </strong> </p>
+                            <p>To have the console print the results of the JS.</p>
+                        </div>
+
+                    </div>
+
+                <div class="script__description">
+                    <h4 id="types"> Data types</h4>
+                    <p>Store your data with data types</p>
+                    <p>Types help define variables - here are some examples of PRIMITIVE TYP:</p>
+                    <ul class="code-text">
+                        <li>Number</li>
+                        <li class="strng">String</li>
+                        <li><span class="bool">Boolean</span></li>
+                    </ul>
+
+                    <p> <span class="code-text strng">Strings</span>
+                    <br>
+                    <br> can add or append additional text, extract bits of text, or remove letters.</p>
+                    <p>These are <strong>Primitive types </strong> and are the basic building blocks of every data structure in JavaScript.</p>
+
+                    <p>While you do not need to declare a variable's type in JavaScript (more on this a little later),
+                        it is important to understand their existence and importance.</p>
+                </div>
+
+
+                <div class="script__description">
+                    <h4>Checking type</h4>
+                    <p class="code-text">
+                        <span class="let-dec">let</span> <span class="vari">positiveInteger</span> = 42; <br>
+                        <span class="let-dec">let</span> <span class="vari">negativeInteger </span> = -42; <br>
+                        <span class="let-dec">let</span> <span class="vari">largeDecimal</span> = 42.42424242; <br>
+                    </p>
+
+                    </p>
+                    <p class="code-text">console.log(typeof positiveInteger) <br>
+                    console.log(negativeInteger) <br>
+                    console.log(typeof largeDecimal) <br>
+                    </p>
+
+                    <p> When the console logs are run above they return "number" which shows the type is seen as a
+                        number
+                    </p>
+                    <p>Variables of type number can be either positive or negative. They can also be whole numbers (1,
+                        2, 3, etc) or decimals (1.4, 67.34, etc).
+                    </p>
+                    <p>Floating-point arithmetic can throw up really weird errors in all programming languages:</p>
+
+                        <p class="code-text">
+                            <span class="let-dec">let</span><span class="vari">integerCalculation </span> = 1 + 2; <span class="console">// gives 3 </span>
+                        </p>
+
+                        <p class="code-text">
+                            <span class="let-dec">let</span><span class="vari"> weirdCalculation </span> = 0.1 + 0.2; <span class="console">// 0.3 expected, actual answer 0.30000000000000004</span></p> 
+                            Where possible, use integer calculations instead (when calculating prices, for example, think in
+                            cents, not euros or dollars).
+                        </p>
+                </div>
             
+
+                <div class="script-wrapper">
+                    <div class="script__description">
+                    <h4>Booleans</h4>
+                    <p>Booleans are the simplest of the primitive types: they hold the values true or false.
+                        They are used in all sorts of cases: whether or not a user is signed in, a checkbox is checked,
+                        or a specific set of conditions are met. </p>
+
+                    <p class="code-text"><span class="let-dec">let</span> <span class="vari"> userIsSignedIn</span> = <span class="bool">true</span></p>
+                    <p class="code-text">console.log(typeof userIsSignedIn) </p>
+                    <p class="code-text console">true</p>
+                    <p class="code-text"><span class="let-dec">let</span> <span class="vari">userIsAdmin </span>= <span class="bool">false</span> ;</p>
+                    <p class="code-text"> console.log(typeof userIsAdmin) </p>
+                    <p class="code-text console">false</p>
+                  
+
+                </div>
+
+                <div class="script__description">
+                    <h4>Strings</h4>
+                    <p>Strings of characters (or just strings) are how you store text in JavaScript variables.
+                        Anything from one letter to quite a large number of letters (over 134 million even in older
+                        browsers)
+                        can be stored in a variable of type strings:
+                    </p>
+                    <p class="code-text">
+                        <span class="let-dec">let</span> <span class="vari">firstName </span>  = 'Will'; <br>
+                        <span class="let-dec">let</span> <span class="vari">lastName </span>  = 'Alexander' ; <br>
+                        <br>
+                        console.log(typeof firstName); <br> </p>
+                    <p>prints first name to console</p>
+                    <p class="code-text">console.log(firstName + lastName); </p>
+                        <p>prints first name and last name concatonated:</p>
+                        <p class="code-text console"> WillAlexander</p>
+                    </p>
+
+                </div>
+                <div class="script__description key-info">
+
+                    <p>Use: </p>
+                    <p>String variables are enclosed in single or double quotes — ' or ": <br>
+                        <br>
+                        <p class="code-text">
+                            <span class="let-dec">let</span> <span class="vari">firstName </span> = "Will";<br>
+                            <span class="let-dec">let</span> <span class="vari">lastName </span> = 'Alexander';<br>
+                        </p>
+                        Strings can also be concatenated (one added to the end of another) using the + operator:<br>
+                        <br>
+                        <strong> <p class="code-text"> <span class="vari">wholeName</span> = <span class="vari">firstName </span> + ' ' + <span class="vari">lastName; </span> <span class="console"> // value: "Will Alexander" </span></strong></p>
+                        <br>
+                        Other more sophisticated operators exist for strings, and we will explore them in later
+                        chapters.</p>
+                </div>
+
+                <div class="script__description">
+                    <h4>Types in JavaScript</h4>
+                    <p>JavaScript is what is called a dynamic, or loosely-typed language. <br>
+                        This means that you can initialize a variable as a number, then reassign it as a string, <br>
+                        or any other type of variable. This allows for a lot of flexibility, but it can <br>
+                        also lead to unexpected behavior if you're not careful: </p>
+                </div>
+
+                <div class="script__description">
+                    <p>Let's recap!
+                        In this chapter, you learned the three main primitive data types in JavaScript.<br>
+
+                        number<br>
+
+                        boolean<br>
+
+                        string<br>
+
+                        Other, more complex data types exist, and in the next chapter,<br>
+                        <br>
+                        we will start looking at a very useful one: objects. <br>
+
+                        Technically, there are three other primitive data types in JavaScript: null, <br>
+                        undefined, and Symbol. You will come across the first two in this course, <br>
+                        while symbols are beyond the scope. For more information, check out the MDN docs for types
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+            </div>
+
+            </div>
+
         </section>
     </main>
     <main>
         <section class="section-1">
-            <h2>Title</h2>
-            <ul class="demo-text">
-                <li></li>
-            </ul>
+            <h2>Define Objects and their attributes with classes</h2>
+            <div class="script-container">
+                <div class="script-wrapper">
+                    <h4 class="title-central"> Objects in javascript</h4>
+                    <div class="script__description">
+                        <h4 class="title-central">What are objects?</h4>
+                        <p>You've probably heard the term <strong>object</strong> in a programming context before. <br>
+                            But what does it really mean? Let's start by looking at some real-world objects, <br>
+                            like pens, books, smartphones, computers, etc.
+                        </p>
+                        <p> You recognize all pens — fountain, ballpoint, felt-tip, gel, and so on — as being part of
+                            <br>
+                            a type of object: pens.<br>
+                            <br>
+                            You can write with them, they use ink, and they can be held in one hand.<br>
+                            <br>
+                            The same goes for books: they have a cover, a number of pages, a title, and one or more
+                            authors.
+                            <br>
+                            <br>
+                            You notice commonalities between different objects, collect the information, and create a
+                            mental <br>
+                            representation for a category of objects.
 
-            <div class="topic-2-container">
-                <h2>Topic</h2>
-                    <p class="explanation"></p>
-                        <!--<div class="image-container">
-                            <img class="demo-media demo-gif demo-pic" src="">
-                        </div>
-                    <p class="explanation"></p>-->
+                        </p>
 
-<!--White Container-->
-<div class="example-container example-container1">
-    <!--light blue demo wrapper-->
-     <div class="demo-wrapper">
-         <!--Demo wrapper title-->
-         <h4>Hover</h4>
-         <!--Beige container-->
-         <div class="square-container square-container1">
-             <!--Demo Square-->
-             <div class="square square-2"></div>
-         </div>
-         <!--Demo text-->
-         <p class="demo-text"></p>
-     </div>
-        
-                        
+                        <p>This mental list of attributes acts as a blueprint for that object. In programming, it's
+                            called a <strong>class</strong>. <br>
+                            When creating a class, you can come up with any custom name, which is why they are called a
+                            named type. <br>
+                            <br>
+                            As you'll see, they also allow you to group lots of details together, which is why they can
+                            be referred <br>
+                            to as <strong>complex types</strong>.</p>
+
                     </div>
+                    <div class="script__description key-info">
+                        <h4 class="title-central">Declaring an Object</h4>
+                        <p><strong>written in Javascript object notation - or JSON</strong></p>
+                        <p>a series of comma-separated key/value pairs between curly braces, which you can store in a
+                            variable:</p>
+                        <p>the way we write that is:</p>
+                        <p class="code-text">
+                            <span class="let-dec">let</span> <span class="obj"> myBook </span> = { 
+                        </p>
+                        <p><i>followed by key-value pairs <br>
+                                (a string and a value that goes with it) go here - <br>
+                                such as : </i> </p>
+                        <p class="code-text">title: "the Story of Tau", <br>
+                            author: "Tom Henry" , <br>
+                            numberOfPages:555 , <br>
+                            isAvailable: <span class="bool">true</span> <br>
+                            }<br>
+
+                        </p>
+
+                        <p>Each key is a string, and the associated values can be of any data type.</p>
+
+                        <p>The major advantage of being able to build objects is that you can group
+                            the attributes of a single thing in one place, be it a book, a user profile,
+                            or the configuration for an app, for example.
+                        </p>
+
+                    </div>
+
+                    <div class="script__description">
+
+                        <h4 class="title-central">Checking an Object's data</h4>
+
+                        <p> Once we have stored the data in an object - how do we go about checking it?</p>
+                        <p>Object stored as:</p>
+                        <p class="code-text">
+                            <span class="let-dec">let</span> <span class="obj">myBook</span> = {<br>
+                            title: "the Story of Tau", <br>
+                            author: "Tom Henry" , <br>
+                            numberOfPages:555 , <br>
+                            isAvailable: <span class="bool">true</span> <br>
+                            };<br>
+                        </p>
+
+                        <p> start by typing:</p>
+                        <p class="code-text"><strong>console.log(myBook.numberOfPages); </strong> </p>
+                        <p>The above translates as: console.log(the object <strong>[followed by the full stop - or dot
+                                notation] </strong> - followed by the variable).<br>
+                        </p>
+                        <p>Use </p>
+                        <ol>
+                            <li>the name of the object, </li>
+                            <li>a dot (.), </li>
+                            <li>and then the name of the key </li>
+
+                        </ol> 
+                        <p>for which you wish to retrieve the value. <br>
+                        </p>
+
+                    </div>
+
+                    <div class="script__description">
+                        <h4 class="title-central">Accessing an Object's data</h4>
+                        <p>Once you have an object stored in a variable, you can access its data like so: <br>
+
+                            <p class="code-text">
+                                <span class="vari">let</span> <span class="obj">myBook </span> = { <br>
+                                title: <span class="strng">'The Story of Tau'</span>, <br>
+                                author: <span class="strng">'Will Alexander'</span>, <br>
+                                numberOfPages: 250, <br>
+                                isAvailable: <span class="bool">true</span> <br>
+                                }; <br>
+                                <br>
+                                <span class="let-dec">let</span><span class="vari"> bookTitle</span> = myBook.Title; <span class="console">// 'The Story of Tau' </span><br>
+                                <span class="let-dec">let</span><span class="vari"> bookPages </span> = myBook.NumberOfPages <span class="console">// 250 </span> <br>
+                                <br>
+                            </p>
+
+            
+                            <p>let bookTitle = myBook.Title</p>
+                            <p> is what we would type in to set the bookTitle variable as</p>
+                    </div>
+                    <div class="script__description">
+                        <h4 class="title-central">Worked example</h4>
+                        <p>First the episode object has been created:</p>
+                        <p class="code-text">
+                            <span class="let-dec">let</span>
+                                <span class="obj"> episode</span> = { <br>
+                                title: <span class="strng">"Dark Beginnings" </span> <br>
+                                duration: 45, <br>
+                                hasBeenWatched: <span class="bool">false </span><br>
+                            }; <br>
+                            <br>
+                        </p>
+                        <p>Then we use the dot notation to extract the data into 3 variables: episodeTitle, episodeDuration and episodeHasBeenWatched
+                        </p>
+                        <p> we could use the <strong>let </strong> keyword or <strong>const </strong> as we aren't going to change these variables
+                        </p>
+                    </div>
+
+                    <div class="script__description">
+                        <p class="code-text">
+                            <span class="let-dec">let</span> <span class="vari"></span>episodeTitle = episode.title; <br>
+                            <span class="let-dec">let</span> <span class="vari"></span>episodeDuration = episode.duration; <br>
+                            <span class="let-dec">let</span> <span class="vari"></span>episodeHasBeenWatched; <br>
+                            <br>
+                            </p>
+
+                 
+
+                    <p>We extract the information from the episode object using a variable name, the dot notation, then the key we are looking for which in this instance is title</p>
+                    <p>writing this all out is very cumbersome for one object - but you would have them in seperate files then extract the data when needed</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="script-container">
+                <div class="script-wrapper">
+                    <h4 class="title-central"> Classes in Javascript</h4>
+                    <div class="script__description">
+                        <h4>Creating Classes</h4>
+                        <p> Building an object by hand using curly-brace notation is fine for simple,
+                            single objects.
+                            <br>
+                            <br>
+                            You will often need many objects of the same type: <br>
+                            <br>
+                            This is where <strong>classes </strong> come in handy. <br>
+                        </p>
+
+                        <p>A class is a blueprint for an object in code. <br>
+                            It allows you to build multiple objects of the same type (called
+                            <strong>instances</strong> of the same class) more quickly, easily, and reliably.
+                        </p>
+
+
+                        <p> <strong>class names are capitlised - eg. Book </strong></p>
+
+                        <p>declare a Class name like :<br>
+                            class Book <br>
+                            class BigBook <br>
+                            class VeryBigBook
+                        </p>
+
+                        <p>To create a class in JavaScript, use the class keyword, followed by a name. Then enclose the
+                            class code in curly braces:</p>
+                        <p class="code-text"> <span class="clss">class Book</span> { <br>
+                            }<br>
+                        </p>
+                    </div>
+
+                    <div class="script__description">
+                        <h4 id="constructors">Constructors</h4>
+
+                        <p id="this" class="code-text"><span class="clss">class Book</span> { <br>
+                            constructor (title, author, pages) {<br>
+                            <span class="ths">this.</span>title = title; <br>
+                            <span class="ths">this.</span>author = author; <br>
+                            <span class="ths">this.</span>pages = pages; <br>
+                            }<br>
+                            } <br>
+
+                            <p> For this class, we would like every Book to have a title, <br>
+                                an author, and number of pages. To do this, you use what is 
+                                called a <strong>constructor</strong>:
+                            </p>
+                            <h4>Using the "this" keyword</h4>
+
+                            <p>The constuctor followed by the a set of instructions to follow within the constructor
+                                when you create a new instance of the Book class. To assign the title, <br>
+                                author and number of pages you receive to this instance, use the <strong>this </strong>
+                                keyword and dot notation:
+                            </p>
+                        </div>
+
+                            <div class="script__description">
+
+                            <h4>Step by step</h4>
+                            <ol>
+                                <li>Declare class: class <p class="code-text">myNewClass{}</p></li>
+                                <li>Within curly brackets use a <p class="code-text">constuctor () </p></li>
+                                <li>List out the variables with commas in between the normal brackets<p class ="code-text"> (title, author, numberOfPages)</p></li>
+                                <li>More curly brackets after the constructor variables <p class ="code-text"> (title, author, numberOfPages){}</li>
+                                <li>Within these curly brackets on a new line use <strong>this</strong> for each variable within the class <p class ="code-text"> <span class="ths"> this.</span>title = title; <br> <span class="ths">this.</span>author = author;</p>  </li>
+                                <li>Followed  dot notation along with the variable names </li>
+                                <li>Remember to close out the <strong>this</strong> items with 2 sets of curly brackets</li>
+                            </ol>
+                        </div>
+               
+
+                    <div class="script__description">
+                        <h4> Once we have created the object we can create a new instance using the "new" keyword </h4>
+
+                        <p>Now that the class is complete, you can create new instances of it using the <strong>new</strong> keyword:
+
+                            <p class="code-text"><span class="let-dec">let</span> myBook = <span class="new">new</span> Book('The Story of Tau', 'Will Alexander', 250);
+                            </p>
+
+                            <p>When we</p> 
+                            <p class="code-text">console.log(myBook);</p>
+
+
+                            <p>The console shows our object: </p>
+                    
+                            <p class="code-text console"> 
+                                [object Object]{ <br>
+                                <br> title: 'The Story of Tau',
+                                <br> author: 'Will Alexander',
+                                <br> pages: 250
+                                <br>}
+                            </p>
+                            <p>Having a Book class allows you to create new Book objects quickly and easily.
+                            <br>Right! Now it's your turn. The best way to learn about classes is to make one yourself.</p>
+                        </p>
+
+                    </div>
+                    <div class="script__description">
+                        <h4>Worked example</h4>
+                        <p>Part 1: create the Episode object</p>
+                        <p class="code-text"><span class="clss"> class Episode </span> { <br>
+                            <span class="constructor">constructor (title, author, pages)</span>{ <br>
+                            <br>
+                            <span class="ths">this.</span>title = title; <br>
+                            <span class="ths">this.</span>duration = duration; <br>
+                            <span class="ths">this.</span>hasBeenWatched = hasBeenWatched;<br>
+                            }<br>
+                          }<br>
+                        </p>
+                        <p>Part 2: add the individual class information to the episodes (instancing a class)</p>
+                        <p class="code-text">
+                            <span class="let-dec">let</span> <span class="vari"></span>firstEpisode = <span class="new">new</span> <span class="obj">Episode </span> (<span class="strng">"Frogs"</span>, <span class="num">10</span>, <span class="bool">true</span> );
+                            <br>
+                            <br>
+                            <span class="let-dec">let</span> <span class="vari"></span>secondEpisode = <span class="new">new</span>  <span class="obj">Episode </span> (<span class="strng">"Snakes"</span>, <span class="num">25</span>, <span class="bool">false</span> );
+                            <br>
+                            <br>
+                            <span class="let-dec">let</span> <span class="vari"></span>thirdEpisode = <span class="new">new</span>  <span class="obj">Episode </span> (<span class="strng">"Crocs"</span>, <span class="num">45</span>, <span class="bool">false</span> );
+                        </p>
+                    </div>
+
+                    <div class="script__description">
+                        <h4>Let's recap! </h4>
+                        <p>We've covered a lot of ground in this chapter!<br>
+                            <ul>
+                                <li><strong>Objects </strong> — key/value pairs in JSON notation which allow you to store multiple pieces of related data in one variable.</li> <br>
+                                <li> <strong>Dot notation </strong> — accessing and modifying the values in an object.</li> <br>
+                                <li> <strong>Classes </strong> — how using classes can allow you to create objects more easily, and in a more readable way. </li><br>
+                            </ul>
+                        </p>
+                    </div>
+
+                </div>
             </div>
 
 
-            
+
         </section>
     </main>
 
+<main>
 
+
+    <section class="section-1">
+
+
+    <h2>Arrays</h2>
+
+    <div class="script-container">
+        <div class="script-wrapper">
+            <h4 class="title-central"> Manage complexity with the right collection</h4>
+            <div class="script__description">
+                <p>There are many situations where you will have multiple objects or variables which you want to treat as a group or list.</p>
+                <p>For example:</p>
+                <ul>
+                    <li>Users connected to your show</li>
+                    <li>Users connected to your app</li>
+                    <li>Names of local restaurants</li>
+                </ul>
+                <p>In javascript the most common form of collection is the <strong>Array.</strong></p>
+                <p>An <strong>array</strong> is an ordered list.</p>
+                <p>This means that each element in the array has an index which corresponds to it's position in the list:</p>
+                <p>Similar to the number on each house on a street:</p>
+                <ul>
+                    <li>The first element has an index of <strong>0</strong></li>  
+                    <li>The second an index of <strong>1</strong></li>
+                    <li>The third an index of <strong>2</strong> and so on...</li>
+                </ul>
+                <p><strong>Arrays are extremely useful.</strong></p>
+                <p>There are two other forms of collection in javascript <strong>Sets</strong> and <strong>Maps.</strong><br>
+                These collections have their use cases but are far less common...</p>
+            </div>
+
+            <div class="script__description key-info">
+                <h4>Using an array to store an ordered list of elements:</h4>
+                <p>Storing information about guests that get front row seats:</p>
+                <p class="code-text">
+                    <span class="let-dec">let</span> <span class="vari">guests</span> = [<span class="strng">"Sarah Kate"</span>, <span class="strng"> "Aubrey Simon"</span>, <span class="strng">"Will Alexander"</span>];
+                </p>
+                <ol>
+                    <li>First declare the array with "let" and the array name (looks like you use lowercase for it) </li>
+                    <li>As opposed to an object that uses curly brackets - <strong> an array uses square brackets</strong></li>
+                    <li>Then we add the guest names in between the square brackets - in between quotation marks"" and separated with commas</li>
+                    <li>The above displays an array of 3 strings.</li>
+                </ol>
+
+                <h4>What happens when we console log this?</h4>
+
+                <p class="code-text">console.log(guests);</p>
+                <p>Returns the below:</p>
+                <p class="code-text console">["Sarah Kate",  "Aubrey Simon", "Will Alexander"]</p>
+
+            </div>
+            <div class="script__description">
+                <h4>What happens if you want to get a specific member of the array?</h4>
+                <p>The whole point here is it is an ordered list...</p>
+                <p>Unless we change the order - the elements of that list will keep their order.</p>
+                <h4>How would we get the first element of the array?</h4>
+                <p class="code-text">console.log(guests[0]);</p>
+                <p>Above we have added square brackets after the variable name, followed by the index we want to get, remember
+                   the <strong> first item in the array is indexed as 0.</strong></p>
+                <p>The above returns the first element in the array</p>
+                <p class="code-text console">"Sarah Kate"</p>
+                <p>What happens when you are trying to get something that is outside of the array (ie you give it a number that isn't on the index):</p>
+                <p class="code-text console">undefined</p>
+            </div>
+
+            <div class="script__description">
+                <h4>Adding Variables to Arrays:</h4>
+                <p>Instead of just creating an array and passing values in - you can pass in variables </p>
+                <p class="code-text"> 
+                    <span class="let-dec">let</span> <span class="vari">firstGuest </span> = <span class="strng">'Sarah Kate';</span> <br> 
+                    <span class="let-dec">let</span> <span class="vari">secondGuest </span></secondGuest>= <span class="strng">'Will Alexander';</span> <br>
+                    <br>
+                    <span class="let-dec">let</span> <span class="vari">guests </span> = <span class="vari">[firstGuest, secondGuest]</span>;
+                </p>
+
+                <p>Now if we console log our guests array to the console:</p>
+
+                <p class="code-text">
+                    console.log(guests);
+                </p>
+                 <p>We get the values that was associated with those variables</p>
+
+                <p class="code-text console">
+                 ["Sara Kate, Will Alexander"]
+                </p>
+            </div>
+
+            <div class="script__description">
+                <h4>Adding Objects to Arrays</h4>
+                <p>Instead of having a string we can add an object</p>
+                <p class="code-text"> 
+                    <span class="let-dec">let</span> <span class="vari">firstGuest</span> = <span class="obj">{name: <span class="strng">'Sarah Kate'</span>, vip: <span class="bool">true </span> }</span>; <br> 
+                    <span class="let-dec">let</span> <span class="vari">secondGuest </span> =<span class="obj"> {name:<span class="strng">'Will Alexander'</span>, vip: <span class="bool">false}</span>; <br></span>
+                    <br>
+                    <span class="let-dec">let</span> <span class="vari"> guests </span> = <span class="vari">[firstGuest, secondGuest]</span>;
+                </p>
+
+                <p>If we run console log again:</p>
+                <p class="code-text">
+                    console.log(guests);
+                </p>
+
+                <p>We get:</p>
+
+                <p class="code-text console">
+                    [[object Object]{ <br>
+                        name: "Sarah Kate" <br>
+                        vip: true <br>
+                    }, [object Object]{ <br>
+                        name: "Will Alexander" <br>
+                        vip: false <br>
+                    }]
+                    
+                </p>
+
+            </div>
+
+            <div class="script__description">
+                <h4>Step by Step</h4>
+                <p>To create an empty array and store it in a variable, you use a pair of square brackets:</p>
+                <p class="code-text"> <span class="let-dec">let</span> <span class="vari">guests</span> = []</p>
+                <p>You can also create a populated array by putting the desired elements inside those square brackets: </p>
+                <p class="code-text"> <span class="let-dec">let</span> <span class="vari">guests</span> = [<span class="strng">'Sarah Kate'</span>,<span class="strng">'Audrey Simon'</span>,<span class="strng">'Will Alexander'</span> ];</p>
+                <p>You can then access elements of that array by their index:</p>
+                <p class="code-text"><span class="let-dec">let</span> <span class="vari">firstGuest</span> = guests[0]; <span class="console">// 'Sarah Kate'</span><br>
+                    <span class="let-dec">let</span> <span class="vari"></span>thirdGuest = guests[2]; <span class="console">// 'Will Alexander'</span> <br>
+                    <span class="let-dec">let</span> undefinedGuest = guests[12] <span class="console">// undefined </span> <br>
+                </p>
+            </div>
+
+            <div class="script__description">
+                <h4>Practice creating an array</h4>
+                <p>Head to CodePen Exercise <a href ="https://jsbin.com/fohobukatu/edit?js,console">P1CH5a </a>and follow the instructions below to create an array to store episodes of your TV show.</p>
+                <p>In a previous exercise, you created three instances of the Episode class as separate variables. In this exercise, you are going to group those variables together in a single array</p>
+                <ol>
+                    <li>Create an array stored in a variable called episodes, and populate it with the three variables firstEpisode, secondEpisode and thirdEpisode. Watch the page populate itself automatically!</li>
+                    <li>Try changing the order in which you add the episodes, and watch what happens as it refreshes.</li>
+                </ol>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="image-container image-container2">
+                <div class="image container">
+                    <h4>Creating a StarWarsFilm class</h4>
+                    <img src="../images/JS Images/StarWarsFilm Class declaration.png" alt="">
+                </div>
+            </div>
+
+            <div class="image-container image-container2">
+                <div class="image container">
+                    <h4>Adding episode Objects</h4>
+                    <img src="../images/JS Images/StarWarsFIlm _class creaation_and_episode _Object_creation.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container image-container2">
+            <div class="image container">
+                <h4>Checking the object and using dot notation - log results</h4>
+                <img src="../images/JS Images/Checkinf the Object.png" alt="">
+            </div>
+        </div>
+
+        <div class="image-container image-container2">
+            <div class="image container">
+                <h4>Declaring the array</h4>
+                <img src="../images/JS Images/declaring sagaList as an  Array.png" alt="">
+            </div>
+        </div>
+
+        <div class="image-container image-container2">
+            <div class="image container">
+                <h4>Checking the array</h4>
+                <img src="../images/JS Images/sagaList Array - console log results.png" alt="">
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<main>
+    <section class="section-1">
+
+    <h2>Objects, Classes and Arrays</h2>
+    <h2>Objects</h2>
+<div class="row">
+    <div class="script__description">
+        <h4>Objects</h4>
+        <p>Declaring an Object:</p>
+        <p class="code-text">
+            <span class="let-dec">let</span> <span class="obj">myBook</span> = {<br>
+            title: "the Story of Tau", <br>
+            author: "Tom Henry" , <br>
+            numberOfPages:555 , <br>
+            isAvailable: <span class="bool">true</span> <br>
+            };<br>
+        </p>
+        <p>Uses:</p>
+        <ul>
+            <li>Curly brackets</li>
+            <li>Key value pairs separated by commas</li>
+        </ul>
+    </div>
+
+    <div class="script__description">
+        <p>Check an object using:</p>
+        <p class="code-text"><strong>console.log(myBook.numberOfPages); </strong> </p>
+    </div>
+
+</div>
+<h2>Classes</h2>
+<div class="row">
     
+
+    <div class="script__description">
+     
+        <h4>Classes</h4>
+        <p>Declaring a Class:</p>
+
+        <p class="code-text"><span class="clss">class Book</span> { <br>
+            <span class="constructor">constructor (title, author, pages)</span> {<br>
+            <span class="ths">this.</span>title = title; <br>
+            <span class="ths">this.</span>author = author; <br>
+            <span class="ths">this.</span>pages = pages; <br>
+            }<br>
+            } <br>
+        </p>
+        <p>Classes:</p>
+        <ul>
+            <li>Use curly brakcets</li>
+            <li>Are capitilised</li>
+            <li>Use a constructor - which use normal brackets</li>
+            <li>Use the keyword this.</li>
+            <li>Uses dot notation</li>
+        </ul>
+    </div>
+
+    <div class="script__description">
+        <p>Check a class using:</p>
+        <p class="code-text"><strong>console.log(myBook); </strong> </p>
+    </div>
+
+</div>
+      
+    <div class="row">
+
+        <h2>Arrays</h2>
+
+    </div>
+
+    <div class="row">
+
+    <div class="script__description">
+        
+        <h2 class="title-central">Arrays are ordered lists</h4>
+        <p class="centered-text"> 
+            Add:
+        </p>
+         <ol> 
+            <li><strong>Values</strong>,</li> 
+            <li><strong>Variables</strong>, </li>
+            <li><strong>Objects</strong> </li>
+
+        </ol>  
+        <p class="centered-text">to Arrays</p>
+    </div>
+  
+
+</div>
+
+    <div class="row">
+
+        <div class="script__description">
+            <h2> Add Values to Arrays</h2>
+            <p class="code-text">
+                <span class="let-dec">let</span> <span class="vari">guests</span> = [<span class="strng">"Sarah Kate"</span>, <span class="strng"> "Aubrey Simon"</span>, <span class="strng">"Will Alexander"</span>];
+            </p>
+        </div>
+
+        <div class="script__description">
+            <h2> Add Variables to Arrays</h2>
+            <p class="code-text"> 
+                <span class="let-dec">let</span> <span class="vari">firstGuest </span> = <span class="strng">'Sarah Kate';</span> <br> 
+                <span class="let-dec">let</span> <span class="vari">secondGuest </span></secondGuest>= <span class="strng">'Will Alexander';</span> <br>
+                <br>
+                <span class="let-dec">let</span> <span class="vari">guests </span> = [<span class="vari">firstGuest, secondGuest</span>];
+            </p>
+        </div>
+
+        <div class="script__description">
+            <h2> Add Objects to Arrays</h2>
+
+            <p class="code-text"> 
+                <span class="let-dec">let</span> <span class="vari">firstGuest</span> = <span class="obj">{name: <span class="strng">'Sarah Kate'</span>, vip: <span class="bool">true </span> }</span>; <br> 
+                <span class="let-dec">let</span> <span class="vari">secondGuest </span> =<span class="obj"> {name:<span class="strng">'Will Alexander'</span>, vip: <span class="bool">false}</span>; <br></span>
+                <br>
+                <span class="let-dec">let</span> <span class="vari"> guests </span> = [<span class="vari">firstGuest, secondGuest</span>];
+            </p>
+        </div>
+
+    </div>
+      
+
+    </section>
+</main>
+
+<main>
+    <section class="section-1">
+    <h2> Value vs. Reference</h2>
+        <div class="row"> 
+            <div class="script__description key-info">
+                <h2>IT IS VERY IMPORTANT YOU UNDERSTAND THE DIFFERENCE</h2>
+            </div>
+        
+
+        </div>
+        <div class="row">
+            <div class="script__description">
+                <p>In Javascript, primitive types like numbers, booleans, and strings are passed by <strong>value</strong>. <br>
+                    <br>
+                This means that when you do something like this:
+                </p>
+                <p class="code-text">
+
+                    <span class="let-dec">let</span> <span class="vari">numberOfGuests </span>  = <span class="num">20</span>; <br>
+                    <br>
+                    <span class="let-dec">let</span>  <span class="vari">totalNumberOfGuests </span> = <span class="vari">numberOfGuests</span>;<span class="console"> // 20 </span>
+                </p>
+                <p>It is the <strong>value</strong> 20, which is copied into the new variable, and no link is maintained between the two variables.</p>
+            </div>
+            <div class="script__description">
+                <p>
+                    This is not the case with objects and arrays, which are passed by <strong> reference.</strong> <br>
+                    If you are not aware of this, it can lead to some unexpected behaviors. <br>
+                    For example:
+                </p>
+                <p class="code-text">
+                    <span class="let-dec">let</span> <span class="vari">artistProfile</span> = <span class="obj"> { <br>
+                        name: <span class="strng">'Tau Perkington'</span>,<br>
+                        age: <span class="num">27</span>, <br>
+                        available: <span class="bool">true</span> <br>
+                    } </span>; <br>
+                    <br>
+                    <span class="let-dec">let</span>  <span class="vari">allProfiles</span> = [artistProfile]; <span class="console"> // new Array containing the above object</span><br>
+                    <br>
+                    artistProfile.available = false; <span class="console">/ changing the object</span><br>
+                    <br>
+                    console.log(allProfiles) <span class="console">// will show { name: 'Tau Perkington', age: 27, available: false }</span><br>
+                </p>
+            </div>
+            <div class="script__description">
+                <p>Even though we created the array and passed it the object before modifying the object, 
+                    you still see the modification in the array. <br>
+                    <br>
+                    This is because when using arrays and objects, 
+                    you are passing <strong>references</strong> to the objects, as opposed to the value of the data within them. <br>
+                    <br>
+                    The variables  artistProfile  and  allProfiles  shown above contain references to the object 
+                    and array in memory.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="script__description">
+                <p>
+                    For more information concerning value types vs. reference types in JavaScript, 
+                    here is an <a href="https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0">article</a>.
+
+                </p>
+            </div>
+
+        </div>
+        <h2>Worked Example</h2>
+        <div class="row">
+            <div class="script__description">
+              
+                <h4> Step 1: </h4>
+                <img src="../images/JS Images/Values and references with arrays/Screenshot 2023-03-21 at 18.09.00.png" alt="">
+                <p> <strong>First declare variables:</strong></p>
+            </div>
+
+            <div class="script__description">
+                
+                <h4> Step 2: </h4>
+                <img src="../images/JS Images/Values and references with arrays/Screenshot 2023-03-21 at 18.09.06.png" alt="">
+                <p><strong>Create object </strong> 
+                    <br> Remember to use key value pairs and curly brackets</p>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="image-container2">
+               
+                <h4> Step 3: </h4>
+                <img src="../images/JS Images/Values and references with arrays/Screenshot 2023-03-21 at 18.09.15.png" alt="">
+                <p>Create the array  
+                    <br> Remember to use <strong>square brackets</strong>
+                </p>
+            </div>
+
+            <div class="image-container2">
+               
+                <h4> Step 4: </h4>
+                <img src="../images/JS Images/Values and references with arrays/Screenshot 2023-03-21 at 18.09.25.png" alt="">
+                <p>Use console log to check the object and array</p>
+            </div>
+  
+
+     
+            <div class="image-container2">
+                <h4> console log results</h4>
+                <img src="../images/JS Images/Values and references with arrays/Screenshot 2023-03-21 at 18.09.31.png" alt="">
+            
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="image-container2">
+                <img src="../images/JS Images/Values and references with arrays/Screenshot 2023-03-21 at 18.41.44.png" alt="">
+                <div class="script__description">
+                    <p>When we pass a new variable with ticketsRemaining = true;</p>
+                    <p>We still are left with the same result on the console log</p>
+                </div>
+            </div>
+
+            <div class="image-container2">
+                <h4> console log results</h4>
+                <img src="../images/JS Images/Values and references with arrays/Screenshot 2023-03-21 at 18.41.48.png" alt="">
+                    <p>Console log still says it is false</p>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="script__description key-info">
+                <p>It is important to note that</p>
+            </div>
+
+        </div>
+
+
+    </section>
+</main>
+
+<main>
+    <section class="section-1">
+        <h2>Working with Arrays</h2>
+        <div class="row">
+            <div class="script__description">
+                <p>3 useful tools when working with arrays</p>
+                <ul>
+                    <li><strong>Length:</strong> <br> A property that every Array has. </li>
+                    <li><strong>The Push Method:</strong> <br>Allows you to add a new element to the array</li>
+                    <li><strong>The Pop Method</strong> <br>Deletes the final element of the array</li>
+                </ul>
+                <p>First create an array:</p>
+                <p class="code-text">
+                    let guests = ['Will Alexander', 'Sarah Kate', 'Audrey Simon'];
+            </div>
+
+        </div> 
+       <div class="row">
+
+            <div class="script__description">
+                <h4>Counting Elements</h4>
+                <p>The length property of an array tells you how many elements there are in it:</p>
+                <p class="code-text">
+                    let guests = ['Will Alexander', 'Sarah Kate', 'Audrey Simon']; <br>
+                    let howManyGuests = guests.length; // 3
+                </p>
+                <p>Use dot notation to access the length property of your array. 
+                    This may not be very useful in this example (seeing as we know how many guests we put in the array!), 
+                    but there are many situations in which you will not know how many elements an array has in advance.
+
+                </p>
+            </div>
+
+            <div class="script__description">
+                <h4>Length</h4>
+                <p class="code-text">
+                 console.log(guests.length);
+                </p>
+                </p>
+                <p>find the length of your array using the above</p>
+                <p class="code-text console"> 3</p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="script__description">
+                <h4>The Push Method</h4>
+                <p class="code-text">
+                   guests.push('Tau Perkington')
+                </p>
+                    <p>If we were to log our guests now:</p>
+                <p class="code-text">console.log(guests)</span>
+                </p>
+                <p>We would see that Tau has been added to our array: </p>
+                <p class="code-text console"> ["Will Alexander","Sarah Kate","Audrey Simon","Tau Perkington"]</p>
+                <p>This adds the list onto the END of the array</p>
+            </div>
+
+            <div class="script__description">
+                <h4>The Push Method pt 2.</h4>
+                <p class="code-text">
+                   guests.push('Tau Perkington', 'James Bond', 'Charlie Bierman')
+                </p>
+                    <p>You can push multiple items at the same time like above, just make sure they have commas in</p>
+
+            </div>
+
+            <div class="script__description">
+                <h4>The Unshift Method</h4>
+                <p class="code-text">
+                    guests.unshift('Tau Perkington')
+                 </p>
+                 <p>If we were to log our guests now:</p>
+                 <p class="code-text">console.log(guests)</span>
+                 <p>This adds the new item to the BEGINNING of the Array:</p>
+                 <p class="code-text console"> ["Tau Perkington", "Will Alexander","Sarah Kate","Audrey Simon"]</p>
+        
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="script__description">
+                <h4>The Pop Method</h4>
+                <p class="code-text">
+                    guests.pop();
+                 </p>
+                 <p>Deletes the final element of the array</p>
+                 <p class="code-text console"> ["Will Alexander","Sarah Kate"]</p>
+                 <p>It pops the last one off the end of the array</p>
+
+            </div>
+
+            <div class="script__description">
+                <h4>Use Pop then Push</h4>
+                <p class="code-text">
+                    guests.pop();
+                    guests.push("Tau Perkington");
+                    console.log(guests);
+                 </p>
+                 <p class="code-text console"> ["Will Alexander","Sarah Kate", "Tau Perkington"]</p>
+                 <p>This will remove the last item on the array and add the new one</p>
+            </div>
+
+        </div>
+
+    <div class="row">
+        <div class="script__description">
+            <h4>Practice working with Arrays</h4>
+            <p>Head to CodePen Exercise <a href="https://codepen.io/nicolaspatschkowski/pen/bGdKbgZ"> P1CH5b </a> 
+                and follow the instructions below to practice working with our array.</p>
+                <ol>
+                    <li>Using the episodes array's push method, add each episode one by one. Add the third episode twice.</li>
+                    <li>Using the pop method, remove the extraneous episode from the array.</li>
+                    <li>Create a variable called numberOfEpisodes which stores the length of the episodes array.</li>
+                    <li>Play around with adding and removing episodes, and see if everything still works properly!</li>
+                </ol>
+
+        </div>
+
+
+
+    </div>
+
+    <h2>Sets and Maps</h2>
+
+    <div class="row">
+        <div class="script__description">
+            <p>Now that you've started to get a grip on arrays let's take a look at the other kinds of
+                JavaScript collection: <strong>sets </strong>and <strong>maps</strong>.</p>
+        </div>
+
+        <div class="script__description">
+            <h4>Sets</h4>
+            <p>In JavaScript, a <strong>set</strong> is an <strong>unordered list</strong>.</p>
+            <p>This means that you cannot reliably retrieve specific list elements, as they do not have a fixed index. 
+                <br>
+                <br>
+                Instead, you can add and remove elements (duplicates are not allowed), and check whether a set contains
+                a certain element or not.  <br>
+                <br>
+                Sets can come in handy for things like storing which users are online at a 
+                given time so you can check if they are or not.</p>
+
+        </div>
+
+
+        <div class="script__description">
+            <h4>Maps</h4>
+            <p>On the other hand, a <strong> map </strong>is an <strong> ordered list of key/value pairs</strong>.</p>
+            <p>While this sounds like an object, there are some important differences. <br>
+            <br>
+            For example, <strong> keys can be any value (not just strings) in maps </strong>; you can easily find its  size, and its key/value pairs can be filtered or modified in certain circumstances.</p>
+            
+        </div>
+
+        <div class="script__description">
+            <p>Sets and maps, while useful in certain situations, are beyond the scope of this course. 
+                For more information, here are some useful links:</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Sets</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Maps</a>
+        </div>
+
+        <div class="script__description">
+            <h4>Recap</h4>
+            <p>In this chapter:</p>
+                <ul>
+                    <li>You learned about collections.</li>
+                    <li>You explored the most common collection in JavaScript: the array.</li>
+                    <li>You learned how to create arrays, how to populate them, and some basic tools for manipulating them.</li>
+                    <li>Finally, you learned about the concepts of sets and maps.</li>
+                </ul>
+        </div>
+    </div>
+</section>
+</main>
+
+<main>
+
+    <section class="section-1">
+        <h2>Functions</h2>
+        <div class="row">
+            <div class="script__description">
+                <p>Writing code means editing at lest one 1 file <br>
+                    But you will likely be working with many. <br>
+                    In these files there will most likely be a <strong>Function</strong>
+                </p>
+                <p class="key-info"> <strong> A function is a block of code that has a name.</strong></p>
+                <p>To execute that block of code, or in other words - make it work, we simply need to mention it by it's name</p>
+                <p class="key-info"> In programming we refer to this as <br>
+                    <strong>"Calling a function" </strong> </p>
+                <p>There are some special functions that you will be able to use frequently</p>
+                <p>When you run your program it knows where to start.</p>
+            </div>
+
+            <div class="script__description">
+                <h4> Main Function</h4>
+                <p>In all applications there is always some form of <span class="key-info"><strong>Main Function</strong></span></p>
+                <p>This function - is in fact the program</p>
+                <p><strong>Main Function</strong></p>
+                <ul>
+                    <li>Synonymous with the program.</li>
+                    <li>It is triggered first - (It is the starting point)<br>
+                        and the program executes based on whatever logic is within the main program.</li>
+                </ul>
+                <p> In other words it starts working based on what other functions are called from that main function </p>
+            </div>
+
+            <div class="script__description">
+                <h4> Main Function Access</h4>
+                <p>In some languages: </p>
+                    <ul> 
+                        <li>The main function is visible to developers </li>
+                        <li>And requires you to insert a starting point
+                            <br>this is typically a few lines of code directly inside of it
+                        </li>
+                    </ul>
+                <p>In other environments</p>
+                    <ul>
+                        <li>The function is hidden from developers</li>
+                        <li>Coding environments provide different files to work with as a starting point</li>
+                        <li>Does not require code input</li>
+                        <li>Instead your projects starting point will be accessed via a <span class="key-info"><strong>Framework</strong></span></li>
+                    </ul>
+                <p>
+            </div>
+
+            <div class="script__description">
+                <h4>Frameworks</h4>
+                <p>A framework is a collection of useful functions grouped together by category which you can use directly, or build upon</p>
+            </div>
+        </div>
+
+        <h2>JavaScript: one language, multiple environments</h2>
+        <div class="row">
+            <div class="script__description">
+                <h2>JSBin</h2>
+                <p>JSBin is a great tool for trying out snippets of JavaScript: 
+                    that's why I've been using it to demonstrate certain tools or principles. 
+                    Let's explore how it runs code - VIDEO
+                </p>
+
+                <p>In JSBin, you can write code line for line in the JavaScript pane, and hit the Run button to execute. 
+                    JSBin then runs through your lines of code and executes them one after the other. 
+                    Therefore, order is important:
+                </p>
+
+                <p class="key-info">When you hit run in JSBin: Whilst there is no explicit main function in JSBin - run is the main fucntion.
+                    When run is hit: the code runs from top to bottom - this is important - see how 
+                    switching the order of things effects output in the example below:
+                </p>
+
+                <p class="code-text">let numberOfGuests = 20; <br>
+                    console.log(numberOfGuests); // 20
+                </p>
+
+                <p>Is not the same as
+                    <p class="code-text"> 
+                        console.log(numberOfGuests); // undefined <br>
+                        let numberOfGuests = 20;
+                    </p>
+                    
+
+                </p>
+
+            </div>
+            <div class="script__description">
+                <h2>Web Pages</h2>
+                <p>If you have been following along with the exercises so far, you have been writing 
+                    JavaScript code for a web page. However, you have not yet seen how your code is 
+                    interpreted behind the scenes!
+                </p>
+
+                <p>In the Codevolve exercises in previous chapters, you were invited to add some code to 
+                    a JavaScript file. But how was that code then executed in the built-in browser?</p>
+
+                <p>Well, there were some other files (to which you did not have access) which did that work for you. 
+                    Firstly, there was another JavaScript file which imported your episodes array and generated elements
+                     it then added to the web page. That file was then imported by the HTML file (that tells the browser 
+                     what should be on the page), and automatically ran the code.</p>
+
+                <p>This is pretty much how JavaScript works on the web. You write some code, save it in one or more
+                     files, and then import those files using a special tag in your HTML file. The browser then automatically 
+                     runs the code in those files, generally speaking in the order in which they are imported.</p>
+
+                     <p>See <strong>Write Javascript for the Web </strong>course</p>
+            </div>
+            <div class="script__description">
+                <h2>Servers</h2>
+                <p>It used to be that JavaScript could only be used in web pages (on the front end), but not any more!
+                     It can now also be used on the back end, managing access to certain resources.
+                    </p>
+                <p>For example, take any webmail service. You have a web page through which you can access your emails, 
+                    but they are not stored in that page. They are stored in a database, and the page you use accesses that 
+                    database through a server, which can be written in JavaScript!
+                </p>
+                <p>However, servers need to be running at all times, and only specific pieces of code need to run at certain times. 
+                    For example, the code that allows you to access your emails should only be executed if and when you decide to open
+                     your mail client!
+                    </p>
+                <p>In this case, an environment (like Node) coupled with specific JavaScript code, allows this to happen. 
+                    The server reacts to you opening the mail client, verifies authentication, and sends your emails.
+                </p>
+
+                <p>See <strong>Go full-stack with Node.js, Express, and Mongo</strong> course.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<main>
+    <h2>Select the proper condition</h2>
+    <section class="section-1">
+        <h2>Conditional Statements</h2>
+        <div class="row">
+            <div class="script__description">
+                <p>In this section we are going to learn how to control the flow of our program</p>
+                <h4 class="key-info"> Program flow</h4>
+                <p>Program flow is the sequence of instructions, the lines of code you have written</p>
+                <p>They can be executed line by lin, one after another, or repeated a few times, or even skip in certain circumstances</p>
+                <p>That is the flow</p>
+            </div>
+            <div class="script__description">
+                <h4>Controlling the flow</h4>
+                <p>We use various techniques to control the flow of a program</p>
+                <p>For Example</p>
+                <p>If we are sorting out our shopping reciepts as we pick them up we check them:</p>
+                <p>If it is for groceries, we put it in a grocery folder</p>
+                <p>If it is a receipt we accidentally picked up at the counter - it belongs to someone else and we throw it away</p>
+                <p>Here a <span class="key-info"><strong>Condition</strong></span> is dictating what happens next.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="script__description">
+                <h4>If/Else statements</h4>
+                <p>This is based on a condition</p>
+                <p><span class="key-info">If</span> (condition A is met)</p>
+                <p>A program will execute one block of code (block of code 1)</p>
+                <p>(if not) <span class="key-info">Else </span>  execute another block of code (block of code 2)</p>
+                <p>To validate the expression a <span class="key-info">Boolean</span> expression is used</p>
+                <p>Booleans are the most primitive data type : having two values: true or false:</p>
+                <ol>
+                    <li>If (true)</li>
+                    <li>Else (false)</li>
+                </ol>
+            </div>
+
+            <div class="script__description">
+                <h4>If/Else statements continued...</h4>
+                <p>The if/else statement is one of the most ubiquitous in programming. 
+                    Whether reacting to user input, the results of calculations, 
+                    or simply checking whether someone is logged in or not, you will often find yourself using if/else statements.</p>
+                <p class="code-text">IF the user is logged in, take them to their home page <br>
+                                    ELSE redirect them to the login page
+
+                </p>
+
+                <p>This is known as a conditional statement, because it checks if certain conditions are met, and reacts accordingly. 
+                     Let's have a look at which kinds of conditions can be used in these statements.</p>
+
+
+            </div>
+            <div class="script__description">
+                <h4>Another way to control the flow is switch</h4>
+                <p>This is sort of like a sibling of the if/else statement</p>
+                <p>Switch uses distinct cases to list possible conditions</p>
+                <p>A switch must cover all possible conditions</p>
+                <p>Any conditions that are not listed in the cases fall into the <span class="key-info">Default</span> class.</p>
+                <p>This default class is a sibling of the final else block in the If/else statement</p>
+            </div>
+
+            <div class="script__description">
+                <p>There is one more data type we need to know:</p>
+                <h4>Enumerations</h4>
+                <p>These are a set of possible cases</p>
+                <p> A good example would be categories of products sold in a store</p>
+                <p>enumeration : store categories <br>
+                    { case 1 : furniture <br>
+                      case 2 : Curtains <br>
+                      case 3 : Home Decorations  <br>
+                </p>
+                <p>there could be a few in the begining then they could grow as the store expands into selling new products</p>
+            </div>
+
+        </div>
+    <div class="row">
+        <div class="script__description">
+            <h4>Using Booleans</h4>
+            <p>In JavaScript, when using simple booleans for if /else statements, the syntax looks like this:</p>
+
+            <p class="code-text">if (myBoolean) { <br>
+                // react to myBoolean being true<br>
+            } else {<br>
+                // react to myBoolean being false<br>
+            }</p>
+
+            <p>So to check if a user is logged in, you can do the following:</p>
+
+            <p class="code-text">
+                <span class="let-dec"> let</span> <span class="vari"> userLoggedIn </span> = <span class="bool"> true</span>; <br>
+                <br>
+                <span class="ifelse"> if</span> (userLoggedIn) {<br>
+                console.log('<span class="console">User logged in!</span>');<br>
+                } <span class="ifelse"> else </span> {<br>
+                console.log('<span class="console">Intruder alert!</span>');<br>
+                } <br>
+            </p>
+
+            <p>In the above case, you will get 'User logged in!' printed to the console, as the  userLoggedIn 
+                 boolean is set to  true. If it were set to  false, you would get 'Intruder alert!' instead.</p>
+        </div>
+
+        <div class="script__description">
+            <h4>Using expressions</h4>
+            <p>Instead of using a simple boolean variable as an  if /else  condition, 
+                you can also use comparative expressions, where you compare values with each other: </p>
+                <h4>Theatre guests example:</h4>
+                <p class="code-text">const numberOfSeats = <span class="num"> 30</span>;<br>
+                    <span class="let-dec">let</span> <span class="vari"> numberOfGuests</span> = <span class="num">25</span>;
+                </p>
+
+                <p>Here we have declared a constant numberOfSeats - as this number does not change</p>
+                <p>Then we have declared the numberOfGuests = 25; (a variable)</p>
+
+                <p class="code-text">const numberOfSeats = <span class="num"> 30</span>;<br>
+                    <span class="let-dec">let</span><span class="vari"> numberOfGuests</span> = <span class="num">25</span>; <br>
+                    <br>
+                    <span class="ifelse">if </span> (<span class="vari">numberOfGuests</span> < numberOfSeats) { <br>
+                        console.log('<span class="console">Seats remaining!</span>'); <br>
+                    } <span class="ifelse">else </span> { <br>
+                        console.log('<span class="console">No seats left!</span>'); <br>
+                    } <br>
+                </p>
+
+                <p> You can see the two conditions and their results are between curly brackets above.</p>  
+            </div>
+            <div class="script__description">
+                <h4>if(), else if(), else() </h4>
+
+                <p>You can also chain  <strong> if /else </strong> statements to react to multiple potential conditions:</p>
+
+                <p class="code-text">const numberOfSeats = <span class="num"> 30</span>;<br>
+                    <span class="let-dec">let</span><span class="vari"> numberOfGuests</span> = <span class="num">25</span>; <br>
+                    <br>
+                    <span class="ifelse">if </span> (numberOfSeats == <span class="vari">numberOfGuests</span>) { <br>
+                        console.log('<span class="console">All seats used!</span>'); <br>
+                    } <span class="ifelse">else if </span> (numberOfSeats < <span class="vari">numberOfGuests</span>){ <br>
+                        console.log('<span class="console">Too many Guests!</span>'); <br>
+                    } <span class="ifelse">else  </span>{<br>
+                     console.log('<span class="console">Seats remaining!</span>'); <br>
+                    }
+                </p>
+
+                <p>Here we check if the number of seats is equal to the number of guests</p>
+                <p>If that is true then the console returns: All seats are used!</p>
+                <p>If there are fewer seats than there are guests, then we have too many guests and 
+                    console log returns that message.
+                </p>
+                <p>Finally if there are more seats then guests the final message is returned saying that there are seats remaining</p>
+                <p> <strong> Chaining statements like this allows you to specify different outcomes for different situations. </strong></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+            <div class="script__description key-info">
+                <p>Types of operators used: </p>
+                <ul>
+                <li>Less than  < </li>
+                <li>Greater than               > </li>
+                <li>Less Than or equal to      <=</li>
+                <li>Greater than or equal to   >=  </li>
+                <li>Checking equality:  ==      </li>
+                <li> Not equal to   != </li>
+                </ul>
+            </div>
+
+            <div id="equality" class="script__description">
+                <h4>Equality operators: Strict and Loose Equality</h4>
+    
+                <p> There are ways of checking if two values are equal in JavaScript:  ==  and  ===, <br>
+                     also known as loose equality and strict equality.
+                </p>
+                <ul>
+                    <li>Loose equality checks value, but not type. Therefore, this returns  true:
+                        5 == '5'</li>
+                    <li>On the other hand, strict equality checks value and type. Therefore:
+                        5 === '5'
+                        returns  false.</li>
+                </ul>
+                <p>Similarly, there are two not-equal operators  !=  and  !==  with the same distinction.</p>
+            </div>
+
+        </div>
+
+        <div  class="script__description">
+
+            <h4>A quick word on equality:  ==  vs  ===</h4>
+
+            <p class="code-text">
+                <span class="let-dec"> let</span> numberOfSeats = <span class="num"> 5</span>; <br>
+                <br>
+                <span class="let-dec"> let</span> numberOfGuests = <span class="strng">'5'</span> <br>
+                <br>
+                <span class="ifelse"> if </span> (<span class="vari">numberOfSeats</span>  == <span class="vari">numberOfGuests </span>){ <br>
+                    console.log('<span class="console">They are equal!</span>'); <br>
+                } <span class="ifelse">else </span> { <br>
+                    console.log('<span class="console">They are not equal!</span>'); <br>
+                } <br>
+            </p>
+
+            <p>Will javascript see the above as equal?</p>
+            <p>We have one data type as a number, and the other as a string value?</p>
+            <p class="code-text console">They are equal</p>
+            <p>The answer is yes, javascript allows the two to be equal</p>
+            <p>However if we are to use === it means will compare value and type</p>
+
+        </div>
+
+        <div class="script__description">
+            <h4>Interesting usage cases:</h4>
+            <p>When using the == to check value the boolean 'true' will be seen as equal to the number 1 or to the string '1'</p>
+            <p>I imagine that when using == to check the value of 'false' it would be seen equal to the number 0 or string '0'</p>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="script__description">
+            <h4>Multiple Conditions</h4>
+
+            <p>So what if we want to check multiple conditions within the same if statement?</p>
+
+            <p class="code-text">
+                <span class="let-dec">let</span> <span class="vari">userLoggedIn</span> = <span class="bool">true</span>; <br>
+                <span class="let-dec">let</span> <span class="vari">userHasPremiumAccount</span> = <span class="bool">true</span>; <br>
+                <span class="let-dec">let</span> <span class="vari">userHasMegaPremiumAccount</span> = <span class="bool">false</span>; <br>
+            </p>
+
+            <p>How would we check if userLoggedin AND userHasPremiumAccount?</p>
+
+            <p class="code-text">
+                <span class="ifelse">if</span>(<span class="vari">userLoggedIn</span> && <span class="vari">userHasPremiumAccount</span>) { <br>
+                console.log('<span class="console">User is logged in and has premium account </span>'); <br>
+                } <br>
+
+                <span class="ifelse">if</span>(<span class="vari">userLoggedIn</span> && <span class="vari">userHasMegaPremiumAccount</span>) { <br>
+                console.log('<span class="console">User is logged in and has mega premium account </span>'); <br>
+                } <br>
+                <br>
+                <br>
+            <span class="console">User is logged in and has premium account </span>
+            </p>
+
+            <p>We use the logical operator && to denote X AND Y </p>
+            <p>We check if both are true</p>
+            <p>In the above we stated that if userLoggedIn and userHasPremiumAccount - print 'User is logged in and has premium account' to console </p>
+            <p>You can chain in multiple operators if you wish</p>
+
+        </div>
+
+    <div class="column">
+
+        <div class="script__description">
+            <h4>Checking If A OR B are true</h4>
+            <p> Checking if a user has one or another of these accounts</p>
+            <p>Logical or operator is ||</p>
+            <p class="code-text">
+                <span class="ifelse">if</span>(<span class="vari">userHasPremiumAccount</span> || <span class="vari">userHasMegaPremiumAccount</span>) { <br>
+                console.log('<span class="console">User is has paid account </span>'); <br>
+                } <br>
+            </p>
+            <p>Important to note that if neither statements is found to be true nothing will be printed on screen</p>
+        </div>
+
+        <div class="script__description">
+            <h4>Comparative statement examples</h4>
+            <p class="code-text">
+                <span class="let-dec">let</span><span class="vari"> userLoggedIn</span> = <span class="bool">true</span>;  <br>
+                <span class="let-dec">let</span><span class="vari">userHasPremiumAccount</span> = <span class="bool">true</span>;  <br>
+                <span class="let-dec">let</span><span class="vari">userHasMegaPremiumAccount</span> = <span class="bool">false</span>;  <br>
+                <br>
+                <span class="vari"> userLoggedIn</span> && <span class="vari">userHasPremiumAccount</span>; <span class="console">// true</span> <br>
+                <span class="vari"> userLoggedIn</span> && <span class="vari">userHasMegaPremiumAccount</span>; <span class="console">// false</span><br>
+                <br>
+                <span class="vari"> userLoggedIn</span> || <span class="vari">userHasPremiumAccount</span>;  <span class="console">// true</span> <br>
+                <span class="vari"> userLoggedIn</span>  || <span class="vari">userHasMegaPremiumAccount</span>; <span class="console">// true</span> <br>
+                <br>
+                !<span class="vari">userLoggedIn</span>;<span class="console"> // false</span><br>
+                !<span class="vari">userHasMegaPremiumAccount</span>;<span class="console"> // true</span> 
+            </p> <br>
+            <p>Of course, these operators can be mixed and matched for your specific needs.</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="script__description">
+            <h4>The Not Operator - !</h4>
+            <p>Checking if the user does not have a mega premium account</p>
+            <p class="code-text">
+                <span class="ifelse">if</span>(!<span class="vari">userHasMegaPremiumAccount</span>) { <br>
+                console.log('<span class="console">Access denied!</span>'); <br>
+                } <br>
+            </p>
+
+        </div>
+   
+        <div class="script__description key-info">
+            <h4>Logical Operators</h4>
+            <p>There will be situations in which you wish to check multiple conditions for a single outcome, 
+                i.e., in the same if statement. For these purposes, there are <strong> logical operators</strong>: 
+            </p>
+            <ul>
+                <li>&&  — Logical AND — for checking if two conditions are both true.</li>
+                <li>||  — Logical OR — for checking if at least one condition is true.</li>
+                <li>!  — Logical NOT — for checking if a condition is not true.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="script__description">
+        <h4>worked example</h4>
+        <p> <strong>Brief</strong></p>
+        <p>Use <a href="https://codepen.io/nicolaspatschkowski/pen/yLNENYB"> this link</a></p>
+        <p>Let's make another modification to the logic in our  Episode  class. 
+            Your colleague's component now expects each episode to have the following properties:</p>
+        <ul>
+            <li>title  : a string containing the episode's title;</li>
+            <li>duration  : a number, corresponding to the duration of the episode in minutes;</li>
+            <li>watchedText  : a string containing either 'Not yet watched', 'Watching', or 'Watched' 
+                depending on how many minutes have been watched;</li>
+            <li>continueWatching  : a boolean which is true if the user has started watching 
+                the episode but has not finished, and false otherwise.</li>
+        </ul>
+        <ol>
+            <li>Using one or more if/else statements, add the required logic to the Episode class constructor.</li>
+            <li>Can you find a way to make your code shorter or easier to read?</li>
+        </ol>
+    </div>
+
+
+    <div class="script__description">
+        <h4>Answer</h4>
+        <p class="code-text">
+            <span class="clss"> class Episode </span> { <br>
+            <span class="constructor"> constructor(title, duration, minutesWatched)</span> { <br>
+            <span class="ths">this</span>.title = title; <br>
+            <span class="ths">this</span>.duration = duration; <br>
+            // Add logic here <br>
+            // ====================== <br>
+            <br>
+            <span class="ifelse">if</span> (minutesWatched === 0) { <br>
+            <span class="ths">this</span>.watchedText = 'Not yet watched'; <br>
+            <span class="ths">this</span>.continueWatching = false; <br>
+            }<span class="ifelse"> else if </span>(minutesWatched > 0 && minutesWatched < duration) { <br>
+            <span class="ths">this</span>.watchedText = 'Watching'; <br>
+            <span class="ths">this</span>.continueWatching = true; <br>
+            } <span class="ifelse"> else if </span>(minutesWatched === duration) { <br>
+            <span class="ths">this</span>.watchedText = 'Watched'; <br>
+            <span class="ths">this</span>.continueWatching = false; <br>
+            } <br>
+            <br>
+            // ====================== <br>
+            } <br>
+            } <br>
+        </p>
+    </div>
+    <div class="row">
+        <div class="script__description key-info">
+            <h4>IMPORTANT - Variable Scoping</h4>
+            <p>In JavaScript, variables created with  <strong>let</strong> or <strong>const</strong> can only 
+                be seen or used inside the code block where they are declared.</p>
+            <p><strong>Variable have certain scopes in certain parts of code</strong></p>
+            <p>Our if else code is the first time we have seen code with different scopes</p>
+            <p>You will undoubtedly come across the legacy  var  keyword for creating variables during your development career.
+                Variables declared this way are not block-scoped but function-scoped, so they do not behave in exactly 
+                the same way as the variables and constants I describe in this course. For more information, 
+                check out <a href="https://www.geeksforgeeks.org/difference-between-var-and-let-in-javascript/"> this article</a>.
+            </p>
+        </div>
+
+        <div class="script__description key-info">
+            <h4>Block Scoping</h4>
+            <p>A code block, often shortened to block, is a section of code enclosed in curly braces  {}.</p>
+            <p>This phenomenon is known as <strong>block scoping</strong>.  Here is an example:</p>
+            <p class="code-text">
+                let userLoggedIn = true; <br>
+                 <br>
+                if (userLoggedIn) {  <br>
+                let welcomeMessage = 'Welcome back!';  <br>
+                } else {  <br>
+                let welcomeMessage = 'Welcome new user!';  <br>
+                }  <br>
+                 <br>
+                console.log(welcomeMessage); <span class="console"> // throws an error </span>  <br>
+            </p>
+            <p>In this code, you have two code blocks as a result of the if / else  statement. 
+                They are highlighted in the image below:
+            </p>
+            <img src="../images/JS Images/Conditional Statements/Screenshot 2023-03-24 at 11.25.46.png" alt="">
+            <p>In both the orange and pink highlighted blocks, declare a variable with  let welcomeMessage. 
+                However, these variables are only available inside the blocks where they are declared. 
+                This is why, when you try to log the contents of welcomeMessage to the console, you get an error: 
+                as far as the code outside the blocks (also known as the outer or parent scope) is concerned, 
+                there is no  welcomeMessage variable!
+            </p>
+        </div>
+        <div class="script__description key-info">
+            <p>So, how would we achieve the desired behavior? How do we pass values out from inside a code block?</p>
+            <p>In this case, one method would be to declare the variable in the outer scope, and then modify it inside the  if /else  blocks:
+
+            </p>
+            <p class="code-text"> let userLoggedIn = true; <br>
+            let welcomeMessage = ''; // declare the variable here <br>
+            <br>
+            if (userLoggedIn) { <br>
+                welcomeMessage = 'Welcome back!'; // modify the outer variable <br>
+            } else { <br>
+                welcomeMessage = 'Welcome new user!'; // modify the outer variable <br>
+            } <br>
+            <br>
+            console.log(welcomeMessage); // prints 'Welcome back!' <br>
+            <br>    
+            </p>
+            <p>Here, because the variable is declared in the parent scope, it is available everywhere, and can be accessed and modified properly.</p>
+            <p>Parents declared in the outer scope (the two let statements above the else) are available to those in the inner scope (the welcomeMessage 's'  that are within the if else blocks)</p>
+            <p>look at how we removed the "let" for inside the if else statements</p>
+            <p>For the default welcome message (parent scope) we also added:
+                <ul>
+                    <li> ' ';  </li>
+                    <li> We could have also used: default;</li>
+                    <li> or just left it blank after a semicolon: ;</li>
+                </ul>
+            </p>
+            <p>Remember to <strong>DECLARE </strong> outside the IF ELSE block and to <strong>MODIFY </strong> within it</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="script__description">
+            <h4>Switch Statements</h4>
+            <p>What if you want to check the value of a variable against a list of expected values, and react accordingly?   For that, you use the switch statement: 
+            </p>
+            <p>Let's say you have some user objects and want to check which kind of account each user has, and send a custom message:
+            </p>
+
+            <p class="code-text"> 
+                let firstUser = {           <br>
+                    name: 'Will Alexander', <br>
+                    age: 33,                <br>
+                    accountLevel: 'normal'  <br>
+                };    <br>
+                <br>
+                let secondUser = {          <br>
+                    name: 'Sarah Kate',     <br>  
+                    age: 21,    <br>
+                    accountLevel: 'premium' <br>
+                }; <br>
+                <br>
+                let thirdUser = {   <br>
+                    name: 'Audrey Simon',  <br>
+                    age: 27,   <br>
+                    accountLevel: 'mega-premium'  <br>
+                };  <br>
+
+            </p>
+        </div>
+
+        <div class="script__description">
+
+            <p>Here, you can use a  switch  statement, which takes the variable you wish to check, and a list of the values to check for as cases: 
+            </p>
+
+            <p class="code-text">
+                <span class="switch"> switch</span> (firstUser.accountLevel) {  <br>
+                    <span class="switch">case</span>'normal':  <br>
+                        console.log('<span class="console">You have a normal account!</span>');  <br>
+                        <span class="switch">break</span>;  <br>
+                        <span class="switch">case</span>'premium':  <br>
+                        console.log('<span class="console">You have a premium account!</span>');  <br>
+                        <span class="switch">break</span>;  <br>
+                        <span class="switch">case</span> 'mega-premium':  <br>
+                        console.log('<span class="console">You have a mega premium account!</span>');  <br>
+                        <span class="switch">break</span>;  <br>
+                        <span class="switch">default: </span> <br>
+                        console.log('<span class="console">Unknown account type!</span>');  <br>
+                } <br>
+            </p>
+
+            <p>After the code to execute in each <strong>case</strong>, add the break statement. <span class="key-info">If you do not do this, JavaScript will keep executing the following cases (known as <strong>cascading</strong>) until it meets a break statement or the end of the switch </span>. As you can see in the example, you can also add a  default case which will only be executed if the variable you are checking does not match any of the listed values.
+            </p>
+
+        </div>
+
+        <div class="script__description key-info">
+            <p> As you can see,  switch statements also use curly braces. This is another example of a code block, so any variables declared inside a  switch  statement will not be available to the surrounding code!
+            </p>
+        </div>
+
+        <div class="script__description">
+            <h4>Recap</h4>
+            <p> We have finished this chapter! We have covered </p>
+            <ul>
+                <li>You learned how if / else  statements work.</li>
+                <li>You saw the different kinds of conditions you can use for if/else statements.</li>
+                <li>You learned how to group together different conditions with logical operators.</li>
+                <li>You explored variable scoping, and the consequences that has on code structure.</li>
+                <li>You discovered the switch statement for checking against a list of expected values.</li>
+            </ul>
+        </div>
+
+    </div>
+    </section>
+</main>
+
+<main>
+    <section class="section-1">
+        <h2>Using Loops</h2>
+        <div class="row">
+            <div class="script__description">
+                <h4>Use the right loop to repeat tasks</h4>
+                <p>In programming, there are sets of instructions you will need to repeat multiple times. Sometimes, you will know the number of repetitions in advance, other times you will not. There will also be times when the number of times does not matter, and you wish to repeat the code until a certain condition is met. For all of these purposes, we will use loops.</p>
+            </div>
+            <div class="script__description">
+                <h4>The For Loop</h4>
+                <p>Let's say that you have 10 passengers to board, and for now you are not concerned with the order in which they are boarded. Use a  for loop to board them one by one until you reach 10:</p>
+                <p class="code-text"> <span class="constant-dec">const </span> <span class="vari"> numberOfPassengers</span> = <span class="num">10</span>; <br>
+                    <br>
+                    <span class="for"> for (let i = 0; i < numberOfPassengers; i++) </span> {  <br>
+                        console.log('<span class="console">Passenger boarded!</span>'); <br>
+                    } <br>
+                </p>
+                <p>For this type of  for loop, create an <strong> index variable i </strong> which serves as a counter for the number of times it has been executed — this is why it starts at 0, as you have not been through the loop yet. <br> 
+                <br>
+                <span class="key-info"> Every time we go through the loop the counter goes up</span></p>
+                <p>The second command in the  for parentheses is the condition for continuing the loop: as soon as it evaluates to  false, you end the loop. In this case, you want it to execute as many times as there are passengers, so once index  i hits 10 (looped 10 times), you want to stop, as there are no passengers left.  </p>
+                <p>The third command tells the for loop to increment  i  (add 1) every time it is run. This is what allows you to keep track of the number of loop executions.</p>
+            </div>
+            <div class="script__description">
+                <p>JavaScript will finish the loop before running any other code, so if you were to write this:</p>
+                <p class="code-text">
+                    const </span> <span class="vari"> numberOfPassengers</span> = <span class="num">10</span>; <br>
+                    <br>
+                        <span class="for"> for (let i = 0; i < numberOfPassengers; i++) </span> { <br>
+                            console.log('<span class="console">Passenger boarded!</span>'); <br>
+                        } <br>
+                    <br>
+                    console.log('<span class="console">All passengers boarded!</span>');<br>
+                </p>
+                <p class="key-info">The final console log would print after the 10 passengers are boarded. </p>
+                <p> Working with indices (the plural of index) is all very well, but what if you are working with an array of passengers and need to board them in order?</p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="script__description">
+                <h4>Dealing with arrays:  for…of  and  for…in</h4>
+                <p>There are many situations in which you will have an array and will need to work your way through it, doing something with each element. This could be updating prices on a menu, processing data from a database, or boarding passengers in order.</p>
+                <p>The old-fashioned way of looping through an array was to use the  for loop you saw above, along with its  length  property. For example, with an array called  passengers:</p>
+
+                <p class="code-text">
+                <span class="for">for (let i = 0; i < passengers.length; i++) </span> {
+                    console.log('<span class="console">Passenger boarded!</span>');
+                }
+            </p>
+
+            <p>While this works, there are two easier ways of looping through (or iterating over) arrays.</p>
+            </div>
+
+            <div class="script__description">
+                <h4>The for...in loop</h4>
+                <p>The for…in loop works in a similar way to the above normal for loop example, but is easier to read, and does all the iteration work for you:</p>
+                <p class="code-text">
+                   <span class="constant-dec">const</span> <span class="vari">passengers</span> = [ <br>
+                    '<span class="strng">Will Alexander</span>',  <br>
+                    '<span class="strng">Sarah Kate</span>',  <br>
+                    '<span class="strng">Audrey Simon</span>',  <br>
+                    '<span class="strng">Tau Perkington</span>' <br>
+                    ]  <br>
+                    <br>
+                    <span class="for"> for (let i in <span class="vari">passengers</span>) </span> {  <br>
+                    console.log('<span class="console">Boarding passenger</span>' + <span class="vari">passengers</span>[i]);  <br>
+                    }
+                </p>
+                <p>As in the previous example,  i starts at zero automatically, and increments with each loop. So you log passengers[0], then passengers[1], then passengers[2], etc. until all passengers have been iterated over. You can of course print each element to the console, as each is a string containing the name of the passenger.</p>
+            </div>
+
+            <div class="script__description">
+                <h4>The for…of loop</h4>
+                <p>For cases where the specific index of an element is not needed during iteration, you can use a  for …of loop: </p>
+            </div>
+
+        </div>
+
+        
+
+
+    </section>
+</main>
+
+
+
+<main>
+<section class="section-1">
+<h2>Top Interview Questions:</h2>
+<div class="script__description">
+    <ol>
+        <li>What is Hoisting in JavaScript?</li>
+        <li>What are Callbacks in JavaScript?</li>
+        <li>What are Closures in JavaScript?</li>
+        <li>What are async functions in JavaScript?</li>
+        <li><a href="#constructors"> What is the purpose of constructors in JavaScript?</a></li>
+        <li> <a href="#equality"> What is the difference between '==' and '===' in JavaScript?</a></li>
+        <li>What is the difference between 'null' and 'undefined' in JavaScript?</li>
+        <li> <a href="#types"> What are the different data types in JavaScript?</a></li>
+        <li>What is NaN in JavaScript?</li>
+        <li>What are var, const, let keywords in JavaScript?</li>
+        <li>What is 'strict mode' in JavaScript?</li>
+        <li>What are Arrow Functions in JavaScript?</li>
+        <li>What is Object Destructuring in JavaScript?</li>
+        <li>What is the Spread Syntax or Spread Operator?</li>
+        <li>What is the Rest Syntax or Rest Operator?</li>
+        <li>What are Higher-order functions in JavaScript?</li>
+        <li>What is the difference between map() and forEach() in JavaScript?</li>
+        <li>What is Immediately Invoked Function Expression (IIFE) in JavaScript?</li>
+        <li><a href="#this"> What is the purpose of the 'this' operator in JavaScript?</a></li>
+        <li>What are Promises in JavaScript?</li>
+        <li>What are events in JavaScript?</li>
+        <li>What are setTimeout and setInterval methods in JavaScript?</li>
+        <li>What is debouncing and throttling in JavaScript?</li>
+        <li>What is event bubbling in JavaScript?</li>
+        <li>What are the different scopes in JavaScript?</li>
+        <li>What is Scope Chain in JavaScript?</li>
+        <li>What are function prototypes in JavaScript?</li>
+        <li>What are call(), apply() and bind() methods in JavaScript?</li>
+        <li>How do you create a polyfill for the bind() function?</li>
+        <li>What is HTML DOM?</li>
+        <li>What is the difference between window and document in JavaScript?</li>
+        <li>What is Event Loop in JavaScript?</li>
+        <li>What is Callback Queue in JavaScript?</li>
+        <li>What is Type Coercion in JavaScript?</li>
+        <li>What is Currying in JavaScript?</li>
+        <li>What is the difference between 'async' and 'defer' attributes?</li>
+        <li>What is Temporal Dead Zone in JavaScript?</li>
+        <li>What is Object Flattening in JavaScript?</li>
+        <li>What are iterators and generators in JavaScript?</li>
+        <li>What is Prototypal Inheritance (prototype chain) in JavaScript?</li>
+
+    </ol>
+</div>
+
+</section>
+
+</main>
+
+
+
 </body>
+
 </html>

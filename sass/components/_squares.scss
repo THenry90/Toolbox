@@ -15,12 +15,13 @@
     margin:auto;
  
     background-color:vars.$background-color3;
-    .square{
-        height: 50px;
-        width:50px;
-        align-self:center;
-        margin:auto;
-    }
+
+}
+
+.square{
+    height: 50px;
+    width:50px;
+  
 }
 .square {
     background-color:vars.$background-color1;
@@ -42,12 +43,46 @@
 .square-7{}
 .square-8{}
 .square-9{}
+
+
+
 /*hover affect*/
 
 .square-1:hover {      
     transform:scale(1.5);
     cursor: pointer;
 }
+
+
+.wide-example{
+    display:flex;
+    flex-direction: column;
+}
+.btn-move{
+    display:flex;
+    align-self: center;
+    cursor: pointer;
+    height:50px;
+    width:50px;
+        &:active + .square-10-move {
+        animation: move-square 2s ease forwards;
+       
+        }
+}
+
+@keyframes move-square {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(1200px);
+   
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 
 
 /*square 2 hovering and affecting square 3*/

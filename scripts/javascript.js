@@ -48,3 +48,23 @@ window.onload = function() {
     //cookie jar
   ;document.getElementById("script-2").innerHTML ="Cookie Jar: " + cookiesInJar;
 }
+
+
+//log code
+
+// Save a reference to the log element
+const logElement = document.getElementById('log1');
+
+// Override the console.log method to also append to the log element
+console.log = function(message) {
+  const p = document.createElement('p');
+  p.textContent = message;
+  logElement.appendChild(p);
+};
+
+console.log ('this is a log message')
+
+function invertColors() {
+  var body = document.getElementsByTagName("body")[0];
+  body.classList.toggle("invert");
+}

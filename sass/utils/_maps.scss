@@ -45,26 +45,78 @@ $colour-invalid: #DB464B; */
 
 That’s right, maps inside of maps */
 
-$colour-primary: #15DEA5;
-$colour-secondary: #001534;
-$colour-accent: #D6FFF5;
-$colour-white: #fff;
-$colour-invalid: #DB464B;
+$input-colour-primary: #15DEA5;
+$input-colour-secondary: #001534;
+$input-colour-accent: #D6FFF5;
+$input-colour-white: #fff;
+$input-colour-invalid: #DB464B;
 
 $txt-input-palette: (
     active: (
-        bg: $colour-primary,
-        border: $colour-primary,
-        txt: $colour-white,
+        bg: $input-colour-primary,
+        border: $input-colour-primary,
+        txt: $input-colour-white,
     ),
     focus: (
-        bg: $colour-primary,
-        border: $colour-primary,
-        txt: $colour-white,
+        bg: $input-colour-primary,
+        border: $input-colour-primary,
+        txt: $input-colour-white,
     ),
     invalid: (
-        bg: $colour-invalid,
-        border: $colour-white,
-        txt: $colour-white,
+        bg: $input-colour-invalid,
+        border: $input-colour-white,
+        txt: $input-colour-white,
     )
 );
+
+/*
+
+@mixin white-on-black {
+    color: $color-secondary;
+    background-color: $color-primary;
+}
+
+@mixin black-on-white {
+    color: $color-primary;
+    background-color:  $color-secondary;
+}
+
+
+.input__label{
+    display:inline-block;
+    width:30%;
+    color:$color-secondary;
+    background-color: $color-primary;
+    border-radius: 20px;
+        &:hover{
+            @include black-on-white;
+        
+        &:active{
+        &--2 {
+        @include white-on-black;
+        }
+    }
+}
+}
+    
+
+
+          
+
+
+
+.map-input-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.map-input {
+    background-color: $color-primary;
+        &:focus{
+            background-color: $color-valid
+        }
+
+}
+
+*/
